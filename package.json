@@ -9,29 +9,29 @@
     },
     "keywords": [],
 
-"contributors": [
+    "contributors": [
     {
-    "name": "Rokas",
-    "url": "https://github.com/RokasIme"
+      "name": "Rokas",
+      "url": "https://github.com/RokasIme"
     },
-    {
-    "name": "Kristina",
-    "url": "https://github.com/kristinakripke"
+     {
+      "name": "Kristina",
+      "url": "https://github.com/kristinakripke"
     },
-    {
-    "name": "Silvija",
-    "url": "https://github.com/Silvija96"
+     {
+      "name": "Silvija",
+      "url": "https://github.com/Silvija96"
     },
-    {
-    "name": "Gintarė",
-    "url": "https://github.com/GintareLa"
+     {
+      "name": "Gintarė",
+      "url": "https://github.com/GintareLa"
     },
-    {
-    "name": "Jonas",
-    "url": "https://github.com/joraka"
+     {
+      "name": "Jonas",
+      "url": "https://github.com/joraka"
     }
-],
-
+  ],
+  
     "license": "MIT",
     "devDependencies": {
         "dead-server": "^1.0.9"
