@@ -8,7 +8,28 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": Silvija
+"contributors": [
+    {
+    "name": "Rokas",
+    "url": "https://github.com/RokasIme"
+    },
+    {
+    "name": "Kristina",
+    "url": "https://github.com/kristinakripke"
+    },
+    {
+    "name": "Silvija",
+    "url": "https://github.com/Silvija96"
+    },
+    {
+    "name": "Gintarė",
+    "url": "https://github.com/GintareLa"
+    },
+    {
+    "name": "Jonas",
+    "url": "https://github.com/joraka"
+    }
+],
     "license": "MIT",
     "devDependencies": {
         "dead-server": "^1.0.9"
