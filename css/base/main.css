@@ -1,3 +1,15 @@
+:root {
+  --black: #222;
+  --white: #fff;
+  --grey: #777;
+  --purple: #8693F8;
+  --blue: #7CBAF7;
+  --circle-color: #E3E5FE;
+  --footer-color: #05091D;
+  --background-darker: #F9F9FF;
+}
+
+
 body,
 body * {
   margin: 0;
