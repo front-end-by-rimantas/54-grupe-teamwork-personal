@@ -49,12 +49,13 @@
 }
 
 .latest-posts-block-date {
-  user-select: none;
+  cursor: default;
 }
 
 .latest-posts-info-author img {
   height: 30px;
   width: 30px;
+  object-fit: cover;
 }
 
 .latest-posts-info-author {
