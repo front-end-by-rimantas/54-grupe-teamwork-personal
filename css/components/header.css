@@ -1,0 +1,33 @@
+header {
+  text-align: center;
+  box-shadow: 0rem 0.05rem 3rem lightgrey;
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.logo {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--black);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  color: var(--purple);
+}
+
+.nav-links a.active {
+  color: var(--purple);
+}
