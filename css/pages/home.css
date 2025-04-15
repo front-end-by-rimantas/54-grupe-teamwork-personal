@@ -17,7 +17,7 @@
 /* My Offered Services daryti section-title.css */
 
 /* 2 x 3 row */
-@import url(../components/singleServices.css);
+@import url(../components/single-services.css);
 
 /* count animation */
 
@@ -31,7 +31,10 @@
 
 /* plan 4 column + hower*/
 
-/* Latest posts from our blog - section-title.css */
+/* Latest posts title - section-title.css */
+
+/* Latest post content */
+@import url(../components/latest-posts.css);
 
 /* 3 column with pic  */
 
