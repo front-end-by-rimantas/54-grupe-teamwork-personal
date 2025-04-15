@@ -1,6 +1,7 @@
 import { header } from "../components/header.js";
 import { hero } from "../components/hero.js";
 import { sectionTitle } from "../components/section-title.js";
+import { singleServices } from "../components/single-services.js";
 
 /* header */
 header();
@@ -13,6 +14,7 @@ hero();
 sectionTitle();
 
 /* 2 x 3 row */
+singleServices();
 
 /* count animation */
 
