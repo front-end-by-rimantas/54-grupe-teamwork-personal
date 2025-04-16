@@ -15,7 +15,7 @@
 /* hero about me */
 
 /* My Offered Services daryti section-title.css */
-
+@import "../base/section-title.css";
 /* 2 x 3 row */
 @import url(../components/single-services.css);
 
