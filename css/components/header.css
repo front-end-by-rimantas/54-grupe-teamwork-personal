@@ -52,7 +52,6 @@ header {
   position: absolute;
   box-shadow: 0rem 0.05rem 2rem lightgray;
   z-index: 1;
-  right: 0;
   top: 6rem;
 }
 
