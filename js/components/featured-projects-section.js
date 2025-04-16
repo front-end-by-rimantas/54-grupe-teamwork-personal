@@ -7,7 +7,7 @@ const items = [
   { image: "img/p6.webp", title: "2D Vinyl Design", text: "raster", tag: "Raster" },
 ];
 
-const tagsList = ["all"].concat(Array.from(new Set(Object.values(items).map(({ tag }) => tag))));
+const tagsList = ["all", ...new Set(Object.values(items).map(({ tag }) => tag))];
 
 export function featuredProjectsSection() {
   let selectedCategory = "all";
