@@ -1,10 +1,10 @@
 const items = [
-  { image: "", title: "2D Vinyl Design", text: "vector", tag: "vector" },
-  { image: "", title: "2D Vinyl Design", text: "vector", tag: "Raster" },
-  { image: "", title: "Creative Poster Design", text: "Agency", tag: "UI/UX" },
-  { image: "", title: "Embosed Logo Design", text: "Portal", tag: "Printing" },
-  { image: "", title: "3D Helmet Design", text: "vector", tag: "vector" },
-  { image: "", title: "2D Vinyl Design", text: "raster", tag: "Raster" },
+  { image: "img/p1.webp", title: "2D Vinyl Design", text: "vector", tag: "vector" },
+  { image: "img/p2.webp", title: "2D Vinyl Design", text: "vector", tag: "Raster" },
+  { image: "img/p3.webp", title: "Creative Poster Design", text: "Agency", tag: "UI/UX" },
+  { image: "img/p4.webp", title: "Embosed Logo Design", text: "Portal", tag: "Printing" },
+  { image: "img/p5.webp", title: "3D Helmet Design", text: "vector", tag: "vector" },
+  { image: "img/p6.webp", title: "2D Vinyl Design", text: "raster", tag: "Raster" },
 ];
 
 const tagsList = ["all"].concat(Array.from(new Set(Object.values(items).map(({ tag }) => tag))));
@@ -12,14 +12,16 @@ const tagsList = ["all"].concat(Array.from(new Set(Object.values(items).map(({ t
 export function featuredProjectsSection() {
   let selectedCategory = "all";
 
-  let html = `<section class='container featured-projects-section'><div class="row">`;
+  let html = `<section class='container'>
+  <div class="row featured-projects-section-category-list">`;
 
   tagsList.forEach((tag) => {
     html += `<button class="featured-projects-section-category" data-category-tag="${tag}">${tag}</button>`;
   });
 
-  html += `</div><div class="row featured-projects-section-items">`;
-  html += `</div></section>`;
+  html += `</div>
+    <div class="row featured-projects-section-items"></div>
+  </section>`;
 
   document.body.insertAdjacentHTML("beforeend", html);
 
@@ -31,7 +33,6 @@ export function featuredProjectsSection() {
 
   for (const btn of categoryButtonsEls) {
     btn.addEventListener("click", () => {
-      console.log("catbtn pressed");
       if (selectedCategory !== btn.dataset.categoryTag) {
         selectedCategory = btn.dataset.categoryTag;
         checkActiveCategory(selectedCategory, categoryButtonsEls);
@@ -43,16 +44,32 @@ export function featuredProjectsSection() {
 
 function regenerateItems(itemsEl, selectedCategory) {
   let html = "";
-  items.forEach(({ title, tag }) => {
+  items.forEach(({ title, tag, image, text }) => {
     if (selectedCategory === "all" || tag === selectedCategory) {
       html += `
-        <div class="col-lg-4 col-md-6 featured-projects-section-block">
-                ${title}
+        <div class="col-lg-4 col-md-6">
+            <div class="featured-projects-section-block" style="transform: scale(0)">
+                <div class="featured-projects-section-image-wrapper">
+                    <a href="#" class="featured-projects-section-overlay">
+                        <img src="img/preview.webp" alt="preview">
+                    </a>
+                    <img src="${image}" alt="image">
+                </div>
+                <h4>${title}</h4>
+                <p>${text}</p>
+            </div>
         </div>
       `;
     }
   });
   itemsEl.innerHTML = html;
+
+  //animation
+  setTimeout(() => {
+    document.querySelectorAll(".featured-projects-section-block").forEach((block) => {
+      block.style.transform = "";
+    });
+  }, 100);
 }
 
 function checkActiveCategory(category, categoryButtons) {
