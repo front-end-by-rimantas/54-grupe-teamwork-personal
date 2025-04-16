@@ -3,6 +3,7 @@ import { hero } from "../components/hero.js";
 import { latestPosts } from "../components/latest-posts.js";
 import { sectionTitle } from "../components/section-title.js";
 import { singleServices } from "../components/single-services.js";
+import { subFooter } from "../components/sub-footer.js";
 
 /* header */
 header();
@@ -42,5 +43,5 @@ latestPosts();
 /* 3 column with pic  */
 
 /* subfooter  */
-
+subFooter();
 /* footer */

@@ -1,0 +1,32 @@
+.container.sub-footer {
+    background-color:  var(--purple);
+}
+.row.purple-row {
+ 
+}
+.purple-content {
+    display: flex;
+    justify-content: center;  
+}
+.purple-content img {
+    margin: 0 3rem;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.purple-content img:hover {
+    opacity: 1;
+
+}
+@keyframes slide-in {
+    0% { transform: translateX(100%); opacity: 0; }; 
+    100% { transform: translateX(0); opacity: 1; };
+} 
+
+
+.purple-content img {
+    animation-direction: normal;;
+   animation: 4s linear 2s infinite running slide-in;
+}  
+
+
+ 
