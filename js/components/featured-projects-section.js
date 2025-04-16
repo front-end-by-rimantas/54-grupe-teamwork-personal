@@ -12,7 +12,7 @@ const tagsList = ["all"].concat(Array.from(new Set(Object.values(items).map(({ t
 export function featuredProjectsSection() {
   let selectedCategory = "all";
 
-  let html = `<section class='container'>
+  let html = `<section class='container featured-projects-section'>
   <div class="row featured-projects-section-category-list">`;
 
   tagsList.forEach((tag) => {
@@ -31,6 +31,7 @@ export function featuredProjectsSection() {
   regenerateItems(itemsEl, selectedCategory);
   checkActiveCategory(selectedCategory, categoryButtonsEls);
 
+  // on category button click
   for (const btn of categoryButtonsEls) {
     btn.addEventListener("click", () => {
       if (selectedCategory !== btn.dataset.categoryTag) {
@@ -41,14 +42,13 @@ export function featuredProjectsSection() {
     });
   }
 }
-
 function regenerateItems(itemsEl, selectedCategory) {
   let html = "";
   items.forEach(({ title, tag, image, text }) => {
     if (selectedCategory === "all" || tag === selectedCategory) {
       html += `
-        <div class="col-lg-4 col-md-6">
-            <div class="featured-projects-section-block" style="transform: scale(0)">
+        <div class="col-md-4">
+            <div class="featured-projects-section-block" style="transform: rotateY(180deg); opacity: 0">
                 <div class="featured-projects-section-image-wrapper">
                     <a href="#" class="featured-projects-section-overlay">
                         <img src="img/preview.webp" alt="preview">
@@ -67,7 +67,7 @@ function regenerateItems(itemsEl, selectedCategory) {
   //animation
   setTimeout(() => {
     document.querySelectorAll(".featured-projects-section-block").forEach((block) => {
-      block.style.transform = "";
+      block.style = "";
     });
   }, 100);
 }
