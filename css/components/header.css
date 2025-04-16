@@ -1,8 +1,9 @@
 header {
-  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 4rem;
   text-align: center;
-  box-shadow: 0rem 0.05rem 3rem lightgrey;
-  /* eventlistener scroll nuo top 200px */
   position: fixed;
   top: 0;
   right: 0;
@@ -24,27 +25,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0rem 0.05rem 3rem lightgrey;
   height: 100%;
+  gap: 1.5rem;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--black);
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .nav-links a:hover,
-.dropbtn:hover {
-  color: var(--purple);
-}
-
+.dropbtn:hover,
 .nav-links a.active {
   color: var(--purple);
 }
 
 .dropbtn {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   border: none;
   background-color: inherit;
   font-family: inherit;
@@ -53,18 +53,21 @@ header {
 .dropdown {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 4rem;
   position: relative;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  box-shadow: 0rem 0.05rem 2rem lightgray;
   z-index: 1;
-  top: 5rem;
+  top: 4rem;
   right: 0;
   width: 10rem;
+}
+
+.shadow {
+  box-shadow: 0rem 0.05rem 2rem lightgray;
 }
 
 .dropdown-content a {
