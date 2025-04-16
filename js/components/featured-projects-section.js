@@ -28,7 +28,7 @@ export function featuredProjectsSection() {
   const categoryButtonsEls = document.querySelectorAll(".featured-projects-section-category");
   const itemsEl = document.querySelector(".featured-projects-section-items");
 
-  regenerateItems(itemsEl, selectedCategory);
+  generateItemElements(itemsEl, selectedCategory);
   checkActiveCategory(selectedCategory, categoryButtonsEls);
 
   // on category button click
@@ -37,12 +37,12 @@ export function featuredProjectsSection() {
       if (selectedCategory !== btn.dataset.categoryTag) {
         selectedCategory = btn.dataset.categoryTag;
         checkActiveCategory(selectedCategory, categoryButtonsEls);
-        regenerateItems(itemsEl, selectedCategory);
+        generateItemElements(itemsEl, selectedCategory);
       }
     });
   }
 }
-function regenerateItems(itemsEl, selectedCategory) {
+function generateItemElements(itemsEl, selectedCategory) {
   let html = "";
   items.forEach(({ title, tag, image, text }) => {
     if (selectedCategory === "all" || tag === selectedCategory) {
