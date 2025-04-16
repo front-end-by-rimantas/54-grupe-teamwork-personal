@@ -4,8 +4,8 @@ export function sectionTitle(title, description) {
         <div class="row">
                 <div class="col-12">
                 <div class="section-title">
-                    <h1>${title}</h1>
-                    <p class="col-12">${description}</p>
+                    <h1>My Offered Services</h1>
+                    <p class="col-12">At about this time of year, some months after New Year's resolutions have been made and kept, or made and neglected.</p>
                 </div>
             </div>
         </section>`;

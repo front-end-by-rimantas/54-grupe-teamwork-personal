@@ -12,7 +12,6 @@ hero();
 /* about me */
 
 /* My Offered Services daryti section-title.css */
-sectionTitle("My Offered Services", "At about this time of year, some months after New Year's resolutions have been made and kept, or made and neglected.");
 
 /* 2 x 3 row */
 singleServices();
