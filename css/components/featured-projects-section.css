@@ -1,0 +1,20 @@
+.featured-projects-section {
+}
+
+.featured-projects-section-category {
+  background: none;
+  font-family: inherit;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.featured-projects-section-category:hover {
+  background-color: red;
+}
+
+.featured-projects-section-category-active {
+  color: blue;
+  font-weight: bold;
+}
