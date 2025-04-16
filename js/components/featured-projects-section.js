@@ -74,7 +74,6 @@ function regenerateItems(itemsEl, selectedCategory) {
 
 function checkActiveCategory(category, categoryButtons) {
   for (const btn of categoryButtons) {
-    console.log("btn", btn.dataset.categoryTag, category);
     if (btn.dataset.categoryTag === category) {
       btn.classList.add("featured-projects-section-category-active");
     } else {
