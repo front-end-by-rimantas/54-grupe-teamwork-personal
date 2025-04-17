@@ -41,4 +41,15 @@ footer .lastp {
 }
 
 .input-email {
+  width: 28rem;
+  padding: 0.8rem;
+  text-transform: capitalize;
+  font-size: 0.9rem;
 }
+
+.input-arrow {
+  color: var(--white);
+  font-weight: 100;
+
+/* 1F852 */ - arrow
+ }
