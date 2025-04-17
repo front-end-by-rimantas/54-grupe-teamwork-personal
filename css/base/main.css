@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: Poppins;
+  src: url(../../fonts/Poppins/Poppins-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
   --black: #222;
   --white: #fff;

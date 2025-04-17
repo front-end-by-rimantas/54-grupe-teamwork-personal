@@ -3,21 +3,22 @@
 @import "../base/layout.css";
 
 /* vendor */
-
+@import "../vendor/font-awesome.min.css";
 /* components */
 
 /* custom */
 
 /* header */
-
+@import "../components/header.css";
 /* hero this is me */
 
 /* hero about me */
 
-/* My Offered Services daryti section-title.css */
-@import "../base/section-title.css";
+/* section-title component */
+@import "../components/section-title.css";
+
 /* 2 x 3 row */
-@import url(../components/single-services.css);
+@import "../components/single-services.css";
 
 /* count animation */
 @import "../components/numbers.css";
@@ -35,10 +36,11 @@
 /* Latest posts title - section-title.css */
 
 /* Latest post content */
-@import url(../components/latest-posts.css);
+@import "../components/latest-posts.css";
 
 /* 3 column with pic  */
 
 /* subfooter  */
 
 /* footer */
+@import "../components/footer.css";
