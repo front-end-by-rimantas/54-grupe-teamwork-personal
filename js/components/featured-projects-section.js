@@ -15,16 +15,14 @@ export function featuredProjectsSection() {
   let selectedCategory = "all";
 
   let html = `<section class='container featured-projects-section'>
-  ${sectionTitleHtml('Our Latest Featured Projects', 'Who are in extremely love with eco friendly system.')}
+  ${sectionTitleHtml("Our Latest Featured Projects", "Who are in extremely love with eco friendly system.")}
   <div class="row featured-projects-section-category-list">`;
 
   tagsList.forEach((tag) => {
     html += `<button class="featured-projects-section-category" data-category-tag="${tag}">${tag}</button>`;
   });
 
-  html += `</div>
-    <div class="row featured-projects-section-items"></div>
-  </section>`;
+  html += `</div><div class="row featured-projects-section-items"></div></section>`;
 
   document.body.insertAdjacentHTML("beforeend", html);
 
@@ -48,7 +46,7 @@ export function featuredProjectsSection() {
 function generateItemElements(itemsEl, selectedCategory) {
   let html = "";
   items.forEach(({ title, tag, image, text }) => {
-    if (selectedCategory === "all" || tag === selectedCategory) {
+    if (selectedCategory === "all" || selectedCategory === tag) {
       html += `
         <div class="col-md-4">
             <div class="featured-projects-section-block" style="transform: rotateY(180deg); opacity: 0">

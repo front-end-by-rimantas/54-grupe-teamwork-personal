@@ -64,6 +64,7 @@
 .featured-projects-section-category-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .featured-projects-section-image-wrapper {
