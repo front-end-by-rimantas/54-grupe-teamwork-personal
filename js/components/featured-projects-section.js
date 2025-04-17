@@ -1,3 +1,5 @@
+import { sectionTitleHtml } from "./section-title.js";
+
 const items = [
   { image: "img/p1.webp", title: "2D Vinyl Design", text: "vector", tag: "vector" },
   { image: "img/p2.webp", title: "2D Vinyl Design", text: "vector", tag: "Raster" },
@@ -13,6 +15,7 @@ export function featuredProjectsSection() {
   let selectedCategory = "all";
 
   let html = `<section class='container featured-projects-section'>
+  ${sectionTitleHtml('Our Latest Featured Projects', 'Who are in extremely love with eco friendly system.')}
   <div class="row featured-projects-section-category-list">`;
 
   tagsList.forEach((tag) => {
