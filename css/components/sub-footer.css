@@ -17,7 +17,7 @@
     opacity: 1;
 
 }
-@keyframes slide-in {
+/* @keyframes slide-in {
     0% { transform: translateX(100%); opacity: 0; }; 
     100% { transform: translateX(0); opacity: 1; };
 } 
@@ -25,8 +25,8 @@
 
 .purple-content img {
     animation-direction: normal;;
-   animation: 4s linear 2s infinite running slide-in;
-}  
+    animation: 4s linear 2s infinite running slide-in;
+}   */
 
 
  
