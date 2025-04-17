@@ -14,10 +14,11 @@
 
 /* hero about me */
 
-/* My Offered Services daryti section-title.css */
-@import "../base/section-title.css";
+/* section-title component */
+@import "../components/section-title.css";
+
 /* 2 x 3 row */
-@import url(../components/single-services.css);
+@import "../components/single-services.css";
 
 /* count animation */
 
@@ -35,7 +36,7 @@
 /* Latest posts title - section-title.css */
 
 /* Latest post content */
-@import url(../components/latest-posts.css);
+@import "../components/latest-posts.css";
 
 /* 3 column with pic  */
 

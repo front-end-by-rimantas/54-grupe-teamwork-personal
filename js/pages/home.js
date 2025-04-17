@@ -11,14 +11,10 @@ hero();
 
 /* about me */
 
-/* My Offered Services daryti section-title.css */
-
 /* 2 x 3 row */
 singleServices();
 
 /* count animation */
-
-/* Our Latest Featured Projects same as My Offered */
 
 /* 6 pics filter */
 featuredProjectsSection();
@@ -29,15 +25,8 @@ featuredProjectsSection();
 /* sectionTitle("Choose Your Plan", "When someone does something that they know that they shouldn't do, did they."); */
 /* plan 4 column + hower*/
 
-
-/* Latest posts from our blog - section-title.css */
-/* sectionTitle("Latest Posts From Our Blog", "You may be a skillful, effective employer but if you don't trust your personnel and the opposite, then the chances of improving and expanding the business."); */
-
-/* Latest posts title - section-title.css */
-
 /* Latest post content */
 latestPosts();
-
 
 /* 3 column with pic  */
 

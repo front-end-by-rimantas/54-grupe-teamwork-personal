@@ -34,13 +34,15 @@ const items = [
 ];
 
 export function latestPosts() {
-  let html = `<section class='container latest-posts'>
-                <div class="row"></div>`;
-                  
-              html += sectionTitleHtml('Latest posts from our blog', 'You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving and expanding the business');
+  let html = `
+    <section class='container latest-posts'>
+      ${sectionTitleHtml(
+        "Latest posts from our blog",
+        "You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving and expanding the business"
+      )}
+      <div class="row">`;
 
-  for (let i = 0; i < items.length; i++) {
-    const { image, authorName, authorImage, date, heartCount, commentCount, title, text } = items[i];
+  items.forEach(({ image, authorName, authorImage, date, heartCount, commentCount, title, text }) => {
     html +=
       /*html*/
       `<div class="col-lg-4 col-md-6 latest-posts-block">
@@ -65,7 +67,7 @@ export function latestPosts() {
           <p>${text}</p>
         </a>
       </div>`;
-  }
+  });
 
   html += `</div></section>`;
 
