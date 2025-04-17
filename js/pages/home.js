@@ -1,7 +1,6 @@
 import { header } from "../components/header.js";
 import { hero } from "../components/hero.js";
 import { latestPosts } from "../components/latest-posts.js";
-import { sectionTitle } from "../components/section-title.js";
 import { singleServices } from "../components/single-services.js";
 
 /* header */
