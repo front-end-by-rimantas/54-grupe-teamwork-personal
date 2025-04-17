@@ -6,24 +6,45 @@ const counter = [
 ]
 
 export function countingNumbers() {
-    let html = `<section class="container main-container">`;
+    let html = `<section class='container main-container'>
+                    <div class='row'>`;
 
-    counter.forEach(item => {
-        html += `<div class="row col-3">
-                        <div class="number">
-                            <span class="count" data-target=${item.number}">0</span>
-                            <span class="text">${item.text}</span>
-                        </div>
-                        <p class="text">projects completed</p>
-                    </div>
-                </section>`;
-    });
-    html += `</section>`;
+        for (const count of counter) {
+            html += `
+                        <div class='number col-3'>
+                            <div class='count'>0</div>
+                            <p class='text'>${count.text}</p>
+                        </div>`;
+    }
+    html += `</div>
+            </section>`;
 
-    document.body.insertAdjacentHTML("beforeend", html);
-    countAnimation();
-                    
-}
+    document.body.insertAdjacentHTML('beforeend', html);
+
+    numbersAnimation();
+    }
+
+    function numbersAnimation() {
+        const numbers = document.querySelectorAll('.count');
+
+            numbers.forEach((number, index) => {
+                const finalCount = counter[index].number;
+                let count = 0;
+                const duration = 3000;
+                const increment = Math.ceil(finalCount / (duration / 100));
+
+                const timer = setInterval(() => {
+                    count += increment;
+                    number.textContent = count > finalCount ? finalCount : count;
+
+                    if (count >= finalCount) {
+                        clearInterval(timer);
+                    }
+                }, 30);
+            })
+        }
+    
+
 
 
 
