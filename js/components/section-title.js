@@ -5,7 +5,7 @@ export function sectionTitle(title, description) {
         <div class="col-12">
           <div class="section-title">
             <h1>${title}</h1>
-            <p class="col-12">${description}</p>
+            <p>${description}</p>
           </div>
         </div>
       </div>
@@ -19,7 +19,7 @@ export function sectionTitleHtml(title, description) {
       <div class="col-12">
         <div class="section-title">
             <h1>${title}</h1>
-            <p class="col-8 m-2">${description}</p>
+            <p>${description}</p>
         </div>
       </div>
     </div>`;
