@@ -3,6 +3,7 @@ import { hero } from "../components/hero.js";
 import { latestPosts } from "../components/latest-posts.js";
 import { sectionTitle } from "../components/section-title.js";
 import { singleServices } from "../components/single-services.js";
+import { footer } from "../components/footer.js";
 
 /* header */
 header();
