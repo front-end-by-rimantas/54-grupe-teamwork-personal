@@ -14,13 +14,16 @@
 
 /* hero about me */
 
-/* My Offered Services daryti section-title.css */
+/* section-title component */
+@import "../components/section-title.css";
 
 /* 2 x 3 row */
+@import "../components/single-services.css";
 
 /* count animation */
 
 /* Our Latest Featured Projects same as My Offered */
+@import "../components/featured-projects-section.css";
 
 /* 6 pics filter */
 
@@ -30,7 +33,10 @@
 
 /* plan 4 column + hower*/
 
-/* Latest posts from our blog - section-title.css */
+/* Latest posts title - section-title.css */
+
+/* Latest post content */
+@import "../components/latest-posts.css";
 
 /* 3 column with pic  */
 

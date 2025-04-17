@@ -1,7 +1,7 @@
 .container,
 .container-fluid {
   width: 100%;
-  padding: 2rem 0;
+  padding: 4rem 0;
   --gap: 1rem;
   --col1: calc((100% - 12 * var(--gap)) / 12);
   --col2: calc(var(--col1) + var(--gap) + var(--col1));
@@ -34,7 +34,7 @@
   margin: 1rem 0;
 }
 [class*="col-"] {
-  height: 2rem;
+  /* height: 2rem; */
   float: left;
   margin: 0 var(--m0);
 }
