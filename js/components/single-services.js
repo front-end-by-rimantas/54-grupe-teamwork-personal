@@ -1,3 +1,5 @@
+import { sectionTitleHtml } from "./section-title.js";
+
 const items = [
   {
     icon: "pie-chart",
@@ -32,18 +34,23 @@ const items = [
 ];
 
 export function singleServices() {
-  let html = `<section class='container single-services'><div class="row">`;
+  let html =
+    `<section class='container single-services'>` +
+    sectionTitleHtml(
+      "My Offered Services",
+      "At about this time of year, some months after New Year&rsquo;s resolutions have been made and kept, or made and neglected."
+    );
 
-  for (let i = 0; i < items.length; i++) {
-    const { icon, title, text } = items[i];
-    html +=
-      /*html*/
-      `<div class="col-lg-4 col-md-6 single-services-block">
+  html += `<div class="row">`;
+
+  items.forEach(({ icon, title, text }) => {
+    html += `
+      <div class="col-lg-4 col-md-6 single-services-block">
         <div class="single-services-icon"><i class="fa fa-${icon || "desktop"}" aria-hidden="true"></i></div>
         <a href="#" class="single-services-link">${title}</a>
         <p class="single-services-text">${text}</p>
-    </div>`;
-  }
+      </div>`;
+  });
 
   html += `</div></section>`;
 
