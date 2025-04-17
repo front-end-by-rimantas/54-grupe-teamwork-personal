@@ -3,6 +3,7 @@ import { hero } from "../components/hero.js";
 import { latestPosts } from "../components/latest-posts.js";
 import { sectionTitle } from "../components/section-title.js";
 import { singleServices } from "../components/single-services.js";
+import { featuredProjectsSection } from "../components/featured-projects-section.js";
 
 /* header */
 header();
@@ -22,6 +23,7 @@ singleServices();
 /* Our Latest Featured Projects same as My Offered */
 sectionTitle("Our Latest Featured Projects", "Who are in extremely love with eco friendly system.");
 /* 6 pics filter */
+featuredProjectsSection();
 
 /* Feedback */
 sectionTitle("Client's Feedback About Me", "It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person.");
