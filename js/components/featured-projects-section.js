@@ -15,9 +15,8 @@ export function featuredProjectsSection() {
   let selectedCategory = "all";
 
   let html = `<section class='container featured-projects-section'>
+  ${sectionTitleHtml('Our Latest Featured Projects', 'Who are in extremely love with eco friendly system.')}
   <div class="row featured-projects-section-category-list">`;
-
-  // html += sectionTitleHtml('Our Latest Featured Projects', 'Who are in extremely love with eco friendly system.');
 
   tagsList.forEach((tag) => {
     html += `<button class="featured-projects-section-category" data-category-tag="${tag}">${tag}</button>`;
