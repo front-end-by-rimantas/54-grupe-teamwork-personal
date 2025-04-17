@@ -19,7 +19,7 @@ singleServices();
 /* count animation */
 
 /* Our Latest Featured Projects same as My Offered */
-/* sectionTitle("Our Latest Featured Projects", "Who are in extremely love with eco friendly system."); */
+
 /* 6 pics filter */
 featuredProjectsSection();
 
