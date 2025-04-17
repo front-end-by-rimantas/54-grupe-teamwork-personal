@@ -3,6 +3,7 @@ import { hero } from "../components/hero.js";
 import { latestPosts } from "../components/latest-posts.js";
 import { singleServices } from "../components/single-services.js";
 import { featuredProjectsSection } from "../components/featured-projects-section.js";
+import { countingNumbers } from "../components/numbers.js";
 
 /* header */
 header();
@@ -17,7 +18,7 @@ hero();
 singleServices();
 
 /* count animation */
-
+countingNumbers();
 /* Our Latest Featured Projects same as My Offered */
 /* sectionTitle("Our Latest Featured Projects", "Who are in extremely love with eco friendly system."); */
 /* 6 pics filter */

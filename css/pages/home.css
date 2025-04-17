@@ -20,7 +20,7 @@
 @import url(../components/single-services.css);
 
 /* count animation */
-
+@import "../components/numbers.css";
 /* Our Latest Featured Projects same as My Offered */
 @import "../components/featured-projects-section.css";
 
