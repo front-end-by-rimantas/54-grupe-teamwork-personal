@@ -4,6 +4,7 @@ import { latestPosts } from "../components/latest-posts.js";
 import { singleServices } from "../components/single-services.js";
 import { footer } from "../components/footer.js";
 import { featuredProjectsSection } from "../components/featured-projects-section.js";
+import { countingNumbers } from "../components/numbers.js";
 
 
 /* header */
@@ -18,6 +19,8 @@ hero();
 singleServices();
 
 /* count animation */
+
+countingNumbers();
 
 /* 6 pics filter */
 featuredProjectsSection();
