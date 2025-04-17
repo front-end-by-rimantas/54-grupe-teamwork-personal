@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-bottom: 50px;
 }
 
 .single-services-icon {
@@ -33,6 +34,7 @@
 .single-services-block:hover .single-services-icon {
   color: #8490ff;
   background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
