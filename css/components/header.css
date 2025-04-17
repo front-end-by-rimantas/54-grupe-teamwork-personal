@@ -86,3 +86,8 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.header-spacer {
+  width: 100%;
+  height: 4rem;
+}
