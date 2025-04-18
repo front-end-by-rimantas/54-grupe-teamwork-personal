@@ -1,5 +1,6 @@
 import { header } from "../components/header.js";
 import { hero } from "../components/hero.js";
+import { aboutMe } from "../components/about-me.js";
 import { latestPosts } from "../components/latest-posts.js";
 import { singleServices } from "../components/single-services.js";
 import { subFooter } from "../components/sub-footer.js";
@@ -15,7 +16,7 @@ header();
 hero();
 
 /* about me */
-
+aboutMe();
 
 /* 2 x 3 row */
 singleServices();
