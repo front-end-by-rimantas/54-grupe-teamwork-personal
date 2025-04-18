@@ -38,13 +38,15 @@ export function header() {
   }
 
   let HTML = `
-    <header class="">
-      <div class="logo">
-        <img src="./img/logo.webp" alt="Logo" />
+    <header>
+      <div class="header-main-div">
+        <div class="logo">
+          <img src="./img/logo.webp" alt="Logo" />
+        </div>
+        <nav class="nav-links">  
+          ${linksHTML}         
+        </nav>
       </div>
-      <nav class="nav-links">  
-        ${linksHTML}         
-      </nav>
     </header>
     <div class='header-spacer'></div>`;
   document.body.insertAdjacentHTML("beforeend", HTML);
