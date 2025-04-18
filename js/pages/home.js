@@ -2,9 +2,11 @@ import { header } from "../components/header.js";
 import { hero } from "../components/hero.js";
 import { latestPosts } from "../components/latest-posts.js";
 import { singleServices } from "../components/single-services.js";
+import { subFooter } from "../components/sub-footer.js";
 import { footer } from "../components/footer.js";
 import { featuredProjectsSection } from "../components/featured-projects-section.js";
 import { countingNumbers } from "../components/numbers.js";
+
 
 
 /* header */
@@ -40,7 +42,7 @@ latestPosts();
 /* 3 column with pic  */
 
 /* subfooter  */
-
+subFooter();
 /* footer */
 footer();
 
