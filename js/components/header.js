@@ -32,7 +32,8 @@ export function header() {
       </div>
     </div>`;
     } else {
-      linksHTML += `<a class='${activePage}' href=".${link.href}" target="_blanc" > ${link.text} </a>`;
+      // .${link.href}  šiuo metu pakeista į #
+      linksHTML += `<a class='${activePage}' href="#" > ${link.text} </a>`;
     }
   }
 
