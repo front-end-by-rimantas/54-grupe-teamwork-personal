@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: Poppins;
   src: url(../../fonts/Poppins/Poppins-Regular.ttf);
@@ -13,18 +12,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: Poppins;
+  src: url(../../fonts/Poppins/Poppins-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
   --black: #222;
   --white: #fff;
   --grey: #777;
-  --purple: #8693F8;
-  --blue: #7CBAF7;
-  --circle-color: #E3E5FE;
-  --footer-color: #05091D;
-  --background-darker: #F9F9FF;
+  --purple: #8693f8;
+  --blue: #7cbaf7;
+  --circle-color: #e3e5fe;
+  --footer-color: #05091d;
+  --background-darker: #f9f9ff;
 }
-
-
 
 body,
 body * {
