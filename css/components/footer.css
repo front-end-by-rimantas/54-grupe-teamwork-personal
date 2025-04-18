@@ -52,6 +52,7 @@ footer .lastp {
   text-transform: capitalize;
   font-size: 0.9rem;
   outline: none;
+  border: none;
 }
 
 .input-arrow {
