@@ -26,7 +26,7 @@ export function header() {
       <button class="dropbtn">${link.text}
         <i class="fa fa-angle-down"></i>
       </button>
-      <div class="dropdown-content nav-links">
+      <div class="dropdown-content header-dropdown-shadow">
         <a href="#">Blog Home</a>
         <a href="#">Blog Single</a>
       </div>
