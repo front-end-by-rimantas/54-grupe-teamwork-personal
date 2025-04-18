@@ -1,0 +1,85 @@
+
+body,
+body * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: #F9F9FF;
+    padding: 40px 20px; 
+}
+
+.content {
+    width: 38%;
+    color: #222;
+    text-align: left;
+}
+.topic {
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.name {
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.personal-details {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    
+}
+.text {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.hero-section  img {
+    
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-me-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 40px;
+}
+
+.about-me-section {
+   flex-direction: row-reverse;
+}
+.about-me-section > img {
+    width: 450px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    flex-shrink: 0;
+    
+}
+.btn {
+    background: #8490ff;
+    padding: 15px 30px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.btn:hover {
+    box-shadow: 0 20px 20px #ccd0f7;
+}
