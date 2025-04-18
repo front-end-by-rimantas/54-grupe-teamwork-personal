@@ -10,18 +10,19 @@ body * {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     background-color: #F9F9FF;
-    padding: 40px 20px; 
+    margin-top: 70px;
 }
 
 .content {
-    width: 38%;
+    width: 37%;
     color: #222;
     text-align: left;
+    
 }
 .topic {
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 20px;
     font-weight: 200;
     text-transform: uppercase;
@@ -32,53 +33,59 @@ body * {
     margin-bottom: 20px;
 }
 .personal-details {
-    font-size: 30px;
+    font-size: 33px;
     font-weight: 700;
     margin-bottom: 20px;
     
 }
-.text {
+.hero-text {
     font-size: 15px;
     color: #777;
     margin-bottom: 20px;
-    line-height: 1.5;
-}
-.hero-section  img {
-    
-    width: 400px;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
+    line-height: 1.6;
+    max-height: 400px;
 }
 
+.hero-section  img {
+    width: auto;
+    height: 600px;
+    margin-top: 70px;
+}
 .about-me-section {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 60px;
-    gap: 40px;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 80px;
+    margin-top: 70px;
 }
 
 .about-me-section {
    flex-direction: row-reverse;
 }
 .about-me-section > img {
-    width: 450px;
+    width: 530px;
     height: auto;
     object-fit: contain;
-    border-radius: 10px;
-    flex-shrink: 0;
+    display: block;
+    
+    
+}
+.about-me-section .content {
+    width: 30%;
+    margin-bottom: 30px;
     
 }
 .btn {
     background: #8490ff;
-    padding: 15px 30px;
+    padding: 13px 35px;
     border: none;
     color: #fff;
     font-size: 14px;
     text-decoration: none;
+    align-items: flex-end;
+    display:flex;
+    
 }
 .btn:hover {
     box-shadow: 0 20px 20px #ccd0f7;
