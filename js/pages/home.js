@@ -2,6 +2,12 @@ import { header } from "../components/header.js";
 import { hero } from "../components/hero.js";
 import { latestPosts } from "../components/latest-posts.js";
 import { singleServices } from "../components/single-services.js";
+import { subFooter } from "../components/sub-footer.js";
+import { footer } from "../components/footer.js";
+import { featuredProjectsSection } from "../components/featured-projects-section.js";
+import { countingNumbers } from "../components/numbers.js";
+
+
 
 /* header */
 header();
@@ -10,18 +16,25 @@ hero();
 
 /* about me */
 
+
 /* 2 x 3 row */
 singleServices();
 
 /* count animation */
 
+countingNumbers();
+
 /* 6 pics filter */
+featuredProjectsSection();
 
 /* Feedback */
+
 /* sectionTitle("Client's Feedback About Me", "It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person.");
+
 /* Choose your plan same as My Offered */
 /* sectionTitle("Choose Your Plan", "When someone does something that they know that they shouldn't do, did they."); */
 /* plan 4 column + hower*/
+
 
 /* Latest post content */
 latestPosts();
@@ -29,5 +42,7 @@ latestPosts();
 /* 3 column with pic  */
 
 /* subfooter  */
-
+subFooter();
 /* footer */
+footer();
+
