@@ -1,9 +1,7 @@
 .container.sub-footer {
-    background-color:  var(--purple);
+    background: linear-gradient(to right, var(--purple), var(--blue));;
 }
-.row.purple-row {
- 
-}
+
 .purple-content {
     display: flex;
     justify-content: center;  
@@ -27,6 +25,3 @@
     animation-direction: normal;;
     animation: 4s linear 2s infinite running slide-in;
 }   */
-
-
- 
