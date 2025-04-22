@@ -8,7 +8,7 @@
   display: inline-block;
   cursor: pointer;
   background-image: -webkit-linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .button-1:hover {
