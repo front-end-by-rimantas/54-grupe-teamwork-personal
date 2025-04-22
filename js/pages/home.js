@@ -7,7 +7,7 @@ import { subFooter } from "../components/sub-footer.js";
 import { footer } from "../components/footer.js";
 import { featuredProjectsSection } from "../components/featured-projects-section.js";
 import { countingNumbers } from "../components/numbers.js";
-
+import { clientFeedbackSection } from "../components/client-feedback-section.js";
 
 
 /* header */
@@ -29,8 +29,8 @@ countingNumbers();
 featuredProjectsSection();
 
 /* Feedback */
+clientFeedbackSection();
 
-/* sectionTitle("Client's Feedback About Me", "It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person.");
 
 /* Choose your plan same as My Offered */
 /* sectionTitle("Choose Your Plan", "When someone does something that they know that they shouldn't do, did they."); */
