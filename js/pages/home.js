@@ -8,8 +8,6 @@ import { footer } from "../components/footer.js";
 import { featuredProjectsSection } from "../components/featured-projects-section.js";
 import { countingNumbers } from "../components/numbers.js";
 
-
-
 /* header */
 header();
 // /* hero this is me */
