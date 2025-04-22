@@ -10,9 +10,9 @@
 
 /* header */
 @import "../components/header.css";
+
 /* hero this is me */
 @import "../components/hero.css";
-/* hero about me */
 
 /* section-title component */
 @import "../components/section-title.css";
@@ -22,26 +22,21 @@
 
 /* count animation */
 @import "../components/numbers.css";
+
 /* Our Latest Featured Projects same as My Offered */
 @import "../components/featured-projects-section.css";
-
-/* 6 pics filter */
 
 /* Feedback */
 @import "../components/client-feedback-section.css";
 
 /* Choose your plan same as My Offered */
-
-/* plan 4 column + hower*/
-
-/* Latest posts title - section-title.css */
+@import "../components/choose-your-plan.css";
 
 /* Latest post content */
 @import "../components/latest-posts.css";
 
-/* 3 column with pic  */
-
 /* subfooter  */
 @import "../components/sub-footer.css";
+
 /* footer */
 @import "../components/footer.css";
