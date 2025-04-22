@@ -7,11 +7,11 @@ const counter = [
 
 export function countingNumbers() {
     let html = `<section class='container main-container'>
-                    <div class='row'>`;
+                    <div class='row '>`;
 
         for (const count of counter) {
             html += `
-                        <div class='number col-3'>
+                        <div class='number col-xxl-3 col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12'>
                             <div class='count'>0</div>
                             <p class='text'>${count.text}</p>
                         </div>`;
