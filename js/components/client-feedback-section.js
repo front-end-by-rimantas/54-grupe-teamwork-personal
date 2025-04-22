@@ -74,38 +74,24 @@ export function clientFeedbackSection() {
 
   document.body.insertAdjacentHTML("beforeend", html);
 
-  //animation and buttons
   const blockListWrapperEl = document.querySelector(".client-feedback-section-block-list-wrapper");
   const blockListEl = document.querySelector(".client-feedback-section-block-list");
   const upBtn = document.querySelector(".client-feedback-section-upBtn");
   const downBtn = document.querySelector(".client-feedback-section-downBtn");
 
-  let visibleItemCount = 2;
-
   function checkIndexes() {
+    const visibleItemCount = blockListWrapperEl.offsetWidth < 850 ? 1 : 2;
+
     Array.from(blockListEl.children).forEach((block, index) => {
       if (index > visibleItemCount - 1) {
         block.style.display = "none";
-        block.style.width = visibleItemCount === 2 ? "50%" : "100%";
       } else {
         block.style.display = "";
-        block.style.width = "";
       }
     });
   }
 
-  function checkSizes() {
-    Array.from(blockListEl.children).forEach((block, index) => {
-      if(block.style.display !== "none"){
-        block.style.transform = "translateX(-100)"
-      }
-    });
-
-    visibleItemCount = blockListWrapperEl.clientWidth < 850 ? 1 : 2;
-    checkIndexes();
-  }
-
-  checkSizes();
+  checkIndexes();
 
   upBtn.addEventListener("click", () => {
     blockListEl.append(blockListEl.children[0]);
@@ -117,5 +103,5 @@ export function clientFeedbackSection() {
     checkIndexes();
   });
 
-  window.addEventListener("resize", checkSizes);
+  window.addEventListener("resize", checkIndexes);
 }
