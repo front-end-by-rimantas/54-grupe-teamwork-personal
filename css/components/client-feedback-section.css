@@ -26,12 +26,21 @@
 }
 
 .client-feedback-section-buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2.25rem;
+}
+
+.client-feedback-section-buttons > div {
   display: inline-flex;
   flex-direction: column;
   background-color: white;
-  box-shadow: 0 0 15px #0000005e;
-  align-self: flex-start;
-  margin-top: 30px;
+  box-shadow: 0 0 15px #00000030;
+  transition: all 500ms ease-in-out;
+}
+
+.client-feedback-section-buttons > div:hover {
+  box-shadow: -5px 5px 15px #00000047;
 }
 
 .client-feedback-section-buttons button {
@@ -40,10 +49,17 @@
   cursor: pointer;
   border: none;
   z-index: 10;
+  transition: background 200ms ease-in-out;
 }
 
 .client-feedback-section-buttons button:hover {
   background-color: #8490ff;
+}
+
+.client-feedback-section-buttons button:active {
+  transition: none;
+  box-shadow: 1px 1px 5px black inset; 
+  background-color: #6a74cf;
 }
 
 .client-feedback-section-block-list {
@@ -55,6 +71,7 @@
   width: 100%;
   max-width: 1200px;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .client-feedback-section-block-details {
@@ -79,17 +96,14 @@
 @media screen and (max-width: 700px) {
   .client-feedback-section-block-list-wrapper {
     width: 100%;
+    flex-wrap: wrap;
   }
 
-  .client-feedback-section-block {
-    width: 100%;
+  .client-feedback-section-buttons {
+    margin-top: 0;
   }
 
   .client-feedback-section-buttons > div {
     flex-direction: row;
-  }
-
-  .client-feedback-section > .row {
-    flex-wrap: wrap;
   }
 }

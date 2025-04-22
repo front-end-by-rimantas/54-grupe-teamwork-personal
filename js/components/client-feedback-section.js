@@ -48,7 +48,7 @@ export function clientFeedbackSection() {
 
   items.forEach(({ name, message, position, avatarImage, link }) => {
     html += `
-        <a class="client-feedback-section-block" href="${link}">
+        <a class="col-12 client-feedback-section-block" href="${link}">
             <div class="client-feedback-section-block-avatar">
                 <img src="${avatarImage}" alt="avatar">
             </div>
@@ -61,10 +61,12 @@ export function clientFeedbackSection() {
         `;
   });
 
-  html += `     </div>
-                <div class="client-feedback-section-buttons">
+  html += `   </div>
+              <div class="client-feedback-section-buttons">
+                <div>
                   <button class="client-feedback-section-upBtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
                   <button class="client-feedback-section-downBtn"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                </div>
               </div>
             </div>
         </div>
@@ -93,6 +95,12 @@ export function clientFeedbackSection() {
   }
 
   function checkSizes() {
+    Array.from(blockListEl.children).forEach((block, index) => {
+      if(block.style.display !== "none"){
+        block.style.transform = "translateX(-100)"
+      }
+    });
+
     visibleItemCount = blockListWrapperEl.clientWidth < 850 ? 1 : 2;
     checkIndexes();
   }
