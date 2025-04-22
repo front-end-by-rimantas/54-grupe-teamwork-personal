@@ -44,6 +44,7 @@ footer .lastp {
 }
 .input-div {
   position: relative;
+  margin: 0;
 }
 
 .input-email {
@@ -77,4 +78,8 @@ footer .lastp {
   color: var(--white);
   margin-top: 1rem;
   font-size: 0.7rem;
+}
+
+.submitting-show {
+  display: inline-block;
 }
