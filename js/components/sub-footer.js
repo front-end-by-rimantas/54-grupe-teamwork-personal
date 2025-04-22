@@ -25,15 +25,15 @@ export function subFooter() {
   let HTML = `
     <section class="container sub-footer">
         <div class="row purple-row">
-            <div class="col-12 purple-content">
-                <a href="#">`;
+            <div class="col-12 purple-content">`;
+                
 
   for (let i = 0; i < subFooterImg.length; i++) {
     const { imgSrc, alt } = subFooterImg[i];
-    HTML += `<img src="${imgSrc}" alt="${alt}">`;
+    HTML += `<a href="#"><img src="${imgSrc}" alt="${alt}"></a>`;
   }
   HTML += `
-                </a>
+                
             </div>
         </div>
     </section>`;
