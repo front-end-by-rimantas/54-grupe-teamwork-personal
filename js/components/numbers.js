@@ -11,7 +11,7 @@ export function countingNumbers() {
 
         for (const count of counter) {
             html += `
-                        <div class='number col-xxl-3 col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12'>
+                        <div class='number col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12'>
                             <div class='count'>0</div>
                             <p class='text'>${count.text}</p>
                         </div>`;
