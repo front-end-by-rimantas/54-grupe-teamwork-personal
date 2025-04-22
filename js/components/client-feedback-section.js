@@ -2,31 +2,36 @@ import { sectionTitleHtml } from "./section-title.js";
 
 const items = [
   {
-    name: "1 Harriet Maxwell",
+    name: "Harriet Maxwell",
     position: "Designer at Airbnb",
     message:
-      "Clean design and quick load times. It's rare to find a website that just works this smoothly on both desktop and mobile devices.",
+      "Clean design and quick load times. It's rare to find a website that just works this smoothly on both desktop and mobile devices. (1)",
     avatarImage: "img/user1.webp",
+    link: "#",
   },
   {
-    name: "2 Carolyn Craig",
+    name: "Carolyn Craig",
     position: "Product Manager at Meta",
     message:
-      "I love how intuitive everything feels. The layout guides you naturally, and the content is easy to read without feeling overwhelming.",
+      "I love how intuitive everything feels. The layout guides you naturally, and the content is easy to read without feeling overwhelming. (2)",
     avatarImage: "img/user2.webp",
+    link: "#",
   },
   {
-    name: "3 Sarah Underwood",
+    name: "Sarah Underwood",
     position: "Consultant at IBM",
     message:
-      "I was impressed with the responsiveness across screen sizes. Everything stays crisp and usable no matter what device I’m using.",
+      "I was impressed with the responsiveness across screen sizes. Everything stays crisp and usable no matter what device I'm using. (3)",
     avatarImage: "img/user1.webp",
+    link: "#",
   },
   {
-    name: "4 Aaron Trevino",
+    name: "Aaron Trevino",
     position: "Engineer at Netflix",
-    message: "Really appreciate the performance optimizations. Pages load instantly, even with high-quality images and complex layouts.",
+    message:
+      "Really appreciate the performance optimizations. Pages load instantly, even with high-quality images and complex layouts. (4)",
     avatarImage: "img/user2.webp",
+    link: "#",
   },
 ];
 
@@ -41,9 +46,9 @@ export function clientFeedbackSection() {
                         <div class="client-feedback-section-block-list">
                 `;
 
-  items.forEach(({ name, message, position, avatarImage }) => {
+  items.forEach(({ name, message, position, avatarImage, link }) => {
     html += `
-        <a class="client-feedback-section-block" href="#">
+        <a class="client-feedback-section-block" href="${link}">
             <div class="client-feedback-section-block-avatar">
                 <img src="${avatarImage}" alt="avatar">
             </div>
@@ -57,13 +62,10 @@ export function clientFeedbackSection() {
   });
 
   html += `     </div>
-            </div>
-            
-            <div class="client-feedback-section-buttons">
-                <div>
-                    <button class="client-feedback-section-upBtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-                    <button class="client-feedback-section-downBtn"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
-                </div>
+                <div class="client-feedback-section-buttons">
+                  <button class="client-feedback-section-upBtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+                  <button class="client-feedback-section-downBtn"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+              </div>
             </div>
         </div>
     </div>`;
@@ -76,55 +78,36 @@ export function clientFeedbackSection() {
   const upBtn = document.querySelector(".client-feedback-section-upBtn");
   const downBtn = document.querySelector(".client-feedback-section-downBtn");
 
-  let blockWidth = 400;
-  let shiftWidth = 400;
-  let allowClicking = true;
-  const animationTimeMs = 100;
+  let visibleItemCount = 2;
 
-  const enableAnimations = (allow) => {
-    blockListEl.style.transition = allow ? `transform ${animationTimeMs}ms` : "none";
-  };
-
-  function updateWidth() {
-    blockWidth = blockListWrapperEl.offsetWidth;
-    shiftWidth = blockWidth / 2;
-    if (shiftWidth <= 400) shiftWidth = blockWidth;
-    blockListEl.style.width = blockWidth * (blockListEl.children.length + 1) + "px";
-    blockListEl.style.transform = `translateX(${-shiftWidth}px)`;
-
-    for (const el of blockListEl.children) {
-      el.style.width = shiftWidth + "px";
-    }
+  function checkIndexes() {
+    Array.from(blockListEl.children).forEach((block, index) => {
+      if (index > visibleItemCount - 1) {
+        block.style.display = "none";
+        block.style.width = visibleItemCount === 2 ? "50%" : "100%";
+      } else {
+        block.style.display = "";
+        block.style.width = "";
+      }
+    });
   }
 
-  updateWidth();
-  window.addEventListener("resize", updateWidth);
+  function checkSizes() {
+    visibleItemCount = blockListWrapperEl.clientWidth < 850 ? 1 : 2;
+    checkIndexes();
+  }
+
+  checkSizes();
 
   upBtn.addEventListener("click", () => {
-    if (!allowClicking) return;
-    allowClicking = false;
-    enableAnimations(true);
-    blockListEl.style.transform = `translateX(${-shiftWidth * 2}px)`;
-
-    setTimeout(() => {
-      enableAnimations(false);
-      blockListEl.append(blockListEl.firstElementChild);
-      blockListEl.style.transform = `translateX(${-shiftWidth}px)`;
-      allowClicking = true;
-    }, animationTimeMs);
+    blockListEl.append(blockListEl.children[0]);
+    checkIndexes();
   });
 
   downBtn.addEventListener("click", () => {
-    if (!allowClicking) return;
-    allowClicking = false;
-    enableAnimations(true);
-    blockListEl.style.transform = `translateX(0)`;
-
-    setTimeout(() => {
-      enableAnimations(false);
-      blockListEl.prepend(blockListEl.lastElementChild);
-      blockListEl.style.transform = `translateX(${-shiftWidth}px)`;
-      allowClicking = true;
-    }, animationTimeMs);
+    blockListEl.prepend(blockListEl.children[blockListEl.children.length - 1]);
+    checkIndexes();
   });
+
+  window.addEventListener("resize", checkSizes);
 }

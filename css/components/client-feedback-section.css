@@ -1,7 +1,3 @@
-.client-feedback-section > .row {
-  display: flex;
-}
-
 .client-feedback-section-block {
   display: inline-flex;
   column-gap: 18px;
@@ -9,6 +5,9 @@
   text-decoration: none;
   color: rgb(119, 119, 119);
   font-size: 0.875rem;
+  width: 100%;
+  margin: 10px;
+  min-height: 180px;
 }
 
 .client-feedback-section-buttons {
@@ -26,11 +25,13 @@
   margin-top: 5px;
 }
 
-.client-feedback-section-buttons > div {
-  display: flex;
+.client-feedback-section-buttons {
+  display: inline-flex;
   flex-direction: column;
   background-color: white;
   box-shadow: 0 0 15px #0000005e;
+  align-self: flex-start;
+  margin-top: 30px;
 }
 
 .client-feedback-section-buttons button {
@@ -46,13 +47,14 @@
 }
 
 .client-feedback-section-block-list {
-    display: flex;
+  display: flex;
 }
 
 .client-feedback-section-block-list-wrapper {
-  width: calc(100% - 70px);
-  overflow: hidden;
-  padding: 5px;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
 }
 
 .client-feedback-section-block-details {
@@ -79,7 +81,7 @@
     width: 100%;
   }
 
-  .client-feedback-section-buttons {
+  .client-feedback-section-block {
     width: 100%;
   }
 
@@ -88,7 +90,6 @@
   }
 
   .client-feedback-section > .row {
-    /* width: 100%; */
     flex-wrap: wrap;
   }
 }
