@@ -40,4 +40,11 @@ export function footer() {
     </footer>`;
 
   document.body.insertAdjacentHTML("beforeend", HTML);
+
+  const submitDOM = document.querySelector(".input-arrow");
+  const submittingTextDOM = document.querySelector(".submitting");
+
+  submitDOM.addEventListener("click", () => {
+    submittingTextDOM.classList.add("submitting-show");
+  });
 }
