@@ -44,8 +44,8 @@ footer .lastp {
 }
 .input-div {
   position: relative;
-  width: 28rem;
 }
+
 .input-email {
   width: 100%;
   padding: 0.75rem;
@@ -74,10 +74,4 @@ footer .lastp {
   color: var(--white);
   margin-top: 1rem;
   font-size: 0.7rem;
-}
-
-@media (max-width: 1200px) {
-  .input-div {
-    width: 20rem;
-  }
 }
