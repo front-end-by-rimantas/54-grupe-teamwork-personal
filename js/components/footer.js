@@ -9,7 +9,7 @@ export function footer() {
   let HTML = `
   <footer class="container">
       <div class="row">
-        <div class="footer-div col-xl-5 col-lg-5 col-md-6 col-6">
+        <div class="footer-div col-xl-5 col-lg-5 col-md-6 col-sm-6 col-12">
           <h4>About Me</h4>
           <p>
             We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your
@@ -20,10 +20,10 @@ export function footer() {
             <a class="colorlib" href="#">Colorlib</a>
           </p>
         </div>
-        <div class="footer-div col-xl-5 col-lg-5 col-md-6 col-6">
+        <div class="footer-div col-xl-5 col-lg-5 col-md-6 col-sm-6 col-12">
           <h4>Newsletter</h4>
           <p>Stay updated with our latest trends</p>
-          <div class="input-div">
+          <div class="input-div col-12">
             <input class="input-email" type="email" placeholder="Enter email address" name="email" />
             <div class="input-arrow">&#x1F852</div>
           </div>
