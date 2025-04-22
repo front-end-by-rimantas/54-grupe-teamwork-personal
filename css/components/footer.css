@@ -68,6 +68,9 @@ footer .lastp {
   height: 100%;
   width: 3rem;
 }
+.input-arrow:hover {
+  cursor: pointer;
+}
 
 .submitting {
   display: none;
