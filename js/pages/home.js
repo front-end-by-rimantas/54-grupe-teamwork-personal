@@ -32,7 +32,6 @@ featuredProjectsSection();
 clientFeedbackSection();
 
 /* Choose your plan same as My Offered */
-/* sectionTitle("Choose Your Plan", "When someone does something that they know that they shouldn't do, did they."); */
 choosePlan();
 
 /* Latest post content */
