@@ -4,39 +4,18 @@
 
 /* vendor */
 @import "../vendor/font-awesome.min.css";
+
 /* components */
+@import "../components/header.css";
+@import "../components/hero.css";
+@import "../components/section-title.css";
+@import "../components/single-services.css";
+@import "../components/numbers.css";
+@import "../components/featured-projects-section.css";
+@import "../components/client-feedback-section.css";
+@import "../components/choose-your-plan.css";
+@import "../components/latest-posts.css";
+@import "../components/sub-footer.css";
+@import "../components/footer.css";
 
 /* custom */
-
-/* header */
-@import "../components/header.css";
-
-/* hero this is me */
-@import "../components/hero.css";
-
-/* section-title component */
-@import "../components/section-title.css";
-
-/* 2 x 3 row */
-@import "../components/single-services.css";
-
-/* count animation */
-@import "../components/numbers.css";
-
-/* Our Latest Featured Projects same as My Offered */
-@import "../components/featured-projects-section.css";
-
-/* Feedback */
-@import "../components/client-feedback-section.css";
-
-/* Choose your plan same as My Offered */
-@import "../components/choose-your-plan.css";
-
-/* Latest post content */
-@import "../components/latest-posts.css";
-
-/* subfooter  */
-@import "../components/sub-footer.css";
-
-/* footer */
-@import "../components/footer.css";
