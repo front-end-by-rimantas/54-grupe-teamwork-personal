@@ -1,10 +1,11 @@
 .plan-column {
   background-color: var(--background-darker);
   text-align: center;
+  margin: 0 0 2rem 0;
 }
 
 .row-background {
-  background-color: var(--background-darker);
+  padding-left: 4rem;
 }
 
 .column-upper {
@@ -74,3 +75,9 @@
   font-weight: 500;
   padding: 2rem 0;
 }
+
+/* @media (min-width: 768px) {
+  .plan-column {
+    margin-bottom: 2rem;
+  }
+} */

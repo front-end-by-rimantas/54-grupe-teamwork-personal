@@ -34,7 +34,7 @@ export function choosePlan() {
 
   for (const plan of plans) {
     html += `
-        <div class="plan-column col-3">
+        <div class="plan-column col-12 col-md-6 col-lg-3">
           <div class="column-upper">
             <div class="outer-circle">
               <div class="inner-circle">${plan.number}</div>
