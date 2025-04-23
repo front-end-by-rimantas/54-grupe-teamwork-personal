@@ -10,10 +10,10 @@ export function countingNumbers() {
     <section class='container main-container'>
       <div class='row'>`;
 
-  countList.forEach((numberEl, index) => {
+  countList.forEach((numberEl) => {
     html += `
     <div class='number col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12'>
-        <div class='count' data-index="${index}">0</div>
+        <div class='count' data-count="${numberEl.count}">0</div>
         <p class='text'>${numberEl.text}</p>
     </div>`;
   });
@@ -36,10 +36,11 @@ export function countingNumbers() {
 
     if (unactivatedElements.size === 0) window.removeEventListener("scroll", onScroll);
   }
+
   window.addEventListener("scroll", onScroll);
 
   function activateCounting(numberEl) {
-    const finalCount = countList[numberEl.dataset.index].count;
+    const finalCount = Number(numberEl.dataset.count);
     let count = 0;
     const countTime = 30;
     const increment = Math.ceil(finalCount / countTime);
