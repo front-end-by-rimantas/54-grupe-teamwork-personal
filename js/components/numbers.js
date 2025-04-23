@@ -28,7 +28,6 @@ export function countingNumbers() {
   function onScroll() {
     unactivatedElements.forEach((numberEl) => {
       const rectBox = numberEl.getBoundingClientRect();
-      console.log(rectBox.bottom);
       if (rectBox.bottom < window.innerHeight) {
         activateCounting(numberEl);
         unactivatedElements.delete(numberEl);
