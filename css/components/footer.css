@@ -68,6 +68,7 @@ footer .lastp {
   background-color: var(--purple);
   height: 100%;
   width: 3rem;
+  border: none;
 }
 .input-arrow:hover {
   cursor: pointer;

@@ -1,9 +1,13 @@
+.client-feedback-section {
+  background-color: var(--background-darker);
+}
 .client-feedback-section-block {
   display: inline-flex;
   column-gap: 18px;
   padding: 22px;
   text-decoration: none;
   color: rgb(119, 119, 119);
+  background-color: var(--white);
   font-size: 0.875rem;
   width: 100%;
   margin: 10px;
@@ -49,6 +53,7 @@
   cursor: pointer;
   border: none;
   z-index: 10;
+  background-color: var(--white);
   transition: background 200ms ease-in-out;
 }
 
@@ -58,7 +63,7 @@
 
 .client-feedback-section-buttons button:active {
   transition: none;
-  box-shadow: 1px 1px 5px black inset; 
+  box-shadow: 1px 1px 5px black inset;
   background-color: #6a74cf;
 }
 
