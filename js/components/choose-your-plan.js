@@ -30,11 +30,11 @@ export function choosePlan() {
           "Choose Your Plan",
           "When someone does something that they know that they shouldn't do, did they."
         )}
-        <div class="row row-background">`;
+        <div class="row">`;
 
   for (const plan of plans) {
     html += `
-        <div class="plan-column col-3">
+        <div class="plan-column ">
           <div class="column-upper">
             <div class="outer-circle">
               <div class="inner-circle">${plan.number}</div>
