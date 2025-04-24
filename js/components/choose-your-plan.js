@@ -59,6 +59,7 @@ export function choosePlan() {
             <span class="column-line"></span>
           </div>
           <div class="price">&#163;${plan.price}</div>
+          <div class="buy-now"><a href="#">buy now</a></div>
         </div>`;
   }
 
