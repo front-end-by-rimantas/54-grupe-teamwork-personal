@@ -2,10 +2,8 @@
   background-color: var(--background-darker);
   text-align: center;
   margin: 0 0 2rem 0;
-}
-
-.row-background {
-  padding-left: 4rem;
+  width: calc(var(--col12) + 2 * var(--m0));
+  float: left;
 }
 
 .column-upper {
@@ -76,8 +74,20 @@
   padding: 2rem 0;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 576px) {
   .plan-column {
-    margin-bottom: 2rem;
+    width: calc(var(--col12) + 2 * var(--m0));
   }
-} */
+}
+
+@media (min-width: 768px) {
+  .plan-column {
+    width: calc(var(--col6) + 2 * var(--m0));
+  }
+}
+
+@media (min-width: 992px) {
+  .plan-column {
+    width: calc(var(--col3) + 2 * var(--m0));
+  }
+}
