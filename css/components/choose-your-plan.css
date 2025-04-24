@@ -91,3 +91,29 @@
     width: calc(var(--col3) + 2 * var(--m0));
   }
 }
+
+.plan-column:hover {
+  background: linear-gradient(to right, var(--purple), var(--blue));
+}
+
+.plan-column:hover .outer-circle {
+  background-color: rgba(255, 255, 255, 0.21);
+}
+
+.plan-column:hover .inner-circle {
+  color: var(--white);
+  background: linear-gradient(to right, var(--purple), var(--blue));
+}
+
+.plan-column:hover h4 {
+  color: var(--white);
+}
+
+.plan-column:hover p {
+  color: var(--white);
+}
+
+.plan-column:hover .column-line {
+  background-color: var(--white);
+  opacity: 1;
+}
