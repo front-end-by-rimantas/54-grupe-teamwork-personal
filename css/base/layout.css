@@ -36,7 +36,6 @@
   margin: 1rem 0;
 }
 [class*="col-"] {
-  /* height: 2rem; */
   float: left;
   margin: 0 var(--m0);
 }
