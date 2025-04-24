@@ -67,8 +67,6 @@ export function subFooter() {
   let isHovering = false;
   const transitionTime = 250;
 
-  resizeElements();
-
   function allowAnimations(isAllowed) {
     itemWrapper.style.transition = isAllowed ? `transform ${transitionTime}ms` : "transform 0s";
   }
@@ -80,11 +78,13 @@ export function subFooter() {
   }
 
   function resizeElements() {
-    if (window.innerWidth < 600) {
-      visibleItemCount = 2;
+    if (window.innerWidth < 700) {
+      visibleItemCount = 1;
     } else if (window.innerWidth < 800) {
-      visibleItemCount = 3;
+      visibleItemCount = 2;
     } else if (window.innerWidth < 1000) {
+      visibleItemCount = 3;
+    } else if (window.innerWidth < 1100) {
       visibleItemCount = 4;
     } else {
       visibleItemCount = 5;
@@ -95,8 +95,6 @@ export function subFooter() {
     itemWrapper.style.setProperty("--child-width", `${itemWidth}px`);
     resetTransform();
   }
-
-  shiftItems();
 
   function shiftItems() {
     if (isHovering) return;
@@ -111,6 +109,9 @@ export function subFooter() {
       itemWrapper.style.transform = `translateX(${lastPos}px)`;
     }, transitionTime);
   }
+
+  resizeElements();
+  shiftItems();
 
   setInterval(shiftItems, 3000);
   addEventListener("resize", resizeElements);
