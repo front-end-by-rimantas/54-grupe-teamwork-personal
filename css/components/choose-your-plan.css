@@ -5,7 +5,7 @@
   width: calc(var(--col12) + 2 * var(--m0));
   float: left;
   z-index: 0;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .column-upper {
@@ -115,8 +115,8 @@
 
 .plan-column:hover {
   background: linear-gradient(to right, var(--purple), var(--blue));
+  z-index: 1;
   transform: scale(1.05);
-  z-index: 2;
 }
 
 .plan-column:hover .outer-circle {
