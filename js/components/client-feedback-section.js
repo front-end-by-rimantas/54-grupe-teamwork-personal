@@ -36,7 +36,7 @@ const items = [
 ];
 
 export function clientFeedbackSection() {
-  let html = `<div class="container client-feedback-section">
+  let html = `<section class="container client-feedback-section">
                 ${sectionTitleHtml(
                   "Client's Feedback About Me",
                   "It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person."
@@ -70,7 +70,7 @@ export function clientFeedbackSection() {
               </div>
             </div>
         </div>
-    </div>`;
+    </section>`;
 
   document.body.insertAdjacentHTML("beforeend", html);
 
