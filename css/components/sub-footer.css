@@ -8,6 +8,8 @@
     width: 100%; 
     overflow: hidden; 
     justify-content: space-between;
+    flex-wrap: wrap;
+    height: 4rem;
   
    
 }
@@ -19,7 +21,9 @@
 .purple-content img {
     margin: 0 3rem;
     opacity: 0.5;
-    cursor: pointer;
+    height: 4rem;
+    object-fit: contain;
+    
     
 }
 .purple-content img:hover {
