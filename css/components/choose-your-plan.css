@@ -4,6 +4,8 @@
   margin: 0 0 2rem 0;
   width: calc(var(--col12) + 2 * var(--m0));
   float: left;
+  z-index: 0;
+  transition: 0.3s;
 }
 
 .column-upper {
@@ -113,6 +115,8 @@
 
 .plan-column:hover {
   background: linear-gradient(to right, var(--purple), var(--blue));
+  transform: scale(1.05);
+  z-index: 2;
 }
 
 .plan-column:hover .outer-circle {
@@ -134,7 +138,7 @@
 
 .plan-column:hover .column-line {
   background-color: var(--white);
-  opacity: 1;
+  opacity: 2;
 }
 
 .plan-column:hover .price {
