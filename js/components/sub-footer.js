@@ -54,17 +54,11 @@ export function subFooter() {
   const itemWrapper = document.querySelector(".subfooter-section-wrapper");
   const itemsList = [];
 
-  document.querySelectorAll(".subfooter-section-item-block")[0].style.backgroundColor = "green";
-  document.querySelectorAll(".subfooter-section-item-block")[1].style.backgroundColor = "red";
-
-  Array.from(document.querySelectorAll(".subfooter-section-item-block")).forEach(
-    /** @param {HTMLDivElement} item */
-    (item) => {
-      const clonedItem = item.cloneNode(true);
-      itemWrapper.append(clonedItem);
-      itemsList.push(item, clonedItem);
-    }
-  );
+  Array.from(document.querySelectorAll(".subfooter-section-item-block")).forEach((item) => {
+    const clonedItem = item.cloneNode(true);
+    itemWrapper.append(clonedItem);
+    itemsList.push(item, clonedItem);
+  });
 
   let visibleItemCount = subFooterItems.length;
   let itemWidth = 100;
@@ -106,20 +100,19 @@ export function subFooter() {
 
   function shiftItems() {
     if (isHovering) return;
-
     if (-lastPos >= itemWidth * subFooterItems.length - 1) {
       resetTransform();
     }
 
     setTimeout(() => {
-      lastPos -= itemWidth;
+      if (isHovering) return;
       allowAnimations(true);
+      lastPos -= itemWidth;
       itemWrapper.style.transform = `translateX(${lastPos}px)`;
-
-      setTimeout(shiftItems, 500);
     }, transitionTime);
   }
 
+  setInterval(shiftItems, 3000);
   addEventListener("resize", resizeElements);
 
   itemWrapper.addEventListener("mouseenter", () => {

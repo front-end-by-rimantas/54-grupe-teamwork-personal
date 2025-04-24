@@ -35,3 +35,9 @@
 .subfooter-section-item img:hover {
   opacity: 1;
 }
+
+@media (max-width: 800px) {
+  .subfooter-section-container {
+    width: 100%;
+  }
+}
