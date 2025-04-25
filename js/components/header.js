@@ -33,7 +33,7 @@ export function header() {
     </div>`;
     } else {
       // .${link.href}  šiuo metu pakeista į #
-      linksHTML += `<a class='${activePage}' href="#" > ${link.text} </a>`;
+      linksHTML += `<a class='${activePage}' href=".${link.href}" > ${link.text} </a>`;
     }
   }
 
@@ -41,7 +41,7 @@ export function header() {
     <header>
       <div class="header-main-div">
         <div class="logo">
-          <img src="./img/logo.webp" alt="Logo" />
+          <img src="${currentPage === '/' ? '.' : '..'}/img/logo.webp" alt="Logo" />
         </div>
         <nav class="nav-links">  
           ${linksHTML}         
