@@ -41,7 +41,7 @@ export function header() {
     <header>
       <div class="header-main-div">
         <div class="logo">
-          <img src="./img/logo.webp" alt="Logo" />
+          <img src="${currentPage === '/' ? '.' : '..'}/img/logo.webp" alt="Logo" />
         </div>
         <div class=" meniu-icon">
           <i class="fa fa-bars"></i>
