@@ -1,4 +1,15 @@
 export function header() {
+  let base = "http://localhost:5477/";
+  let projectName = "";
+
+  if (location.hostname !== "localhost") {
+    projectName = "/54-grupe-teamwork-personal";
+    // projectName = '/' + location.pathname.split('/')[1];
+    base = "https://front-end-by-rimantas.github.io/54-grupe-teamwork-personal/";
+    // base = location.origin + projectName
+  }
+  document.head.insertAdjacentHTML("afterbegin", `<base href ="${base}">`);
+
   const menu = [
     { text: "home", href: "/" },
     { text: "about", href: "/about/" },
@@ -32,7 +43,6 @@ export function header() {
       </div>
     </div>`;
     } else {
-      // .${link.href}  šiuo metu pakeista į #
       linksHTML += `<a class='${activePage}' href=".${link.href}" > ${link.text} </a>`;
     }
   }
@@ -41,7 +51,7 @@ export function header() {
     <header>
       <div class="header-main-div">
         <div class="logo">
-          <img src="${currentPage === '/' ? '.' : '..'}/img/logo.webp" alt="Logo" />
+          <img src="./img/logo.webp" alt="Logo" />
         </div>
         <div class=" meniu-icon">
           <i class="fa fa-bars"></i>
