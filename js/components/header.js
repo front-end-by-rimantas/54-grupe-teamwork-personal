@@ -60,8 +60,7 @@ export function header() {
           ${linksHTML}         
         </nav>
       </div>
-    </header>
-    <div class='header-spacer'></div>`;
+    </header>`;
   document.body.insertAdjacentHTML("beforeend", HTML);
 
   const headerEl = document.querySelector("header");
