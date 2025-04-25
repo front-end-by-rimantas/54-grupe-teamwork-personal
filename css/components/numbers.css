@@ -1,7 +1,9 @@
 .main-container {
     background: linear-gradient(to right, var(--purple), var(--blue));
-    height: 20rem;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 5rem;
+    
 }
 
 .number {
@@ -9,7 +11,7 @@
     font-weight: bold;
     color: var(--white);
     text-align: center;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .text {
@@ -18,5 +20,4 @@
     color: var(--white);
     font-weight: normal;
 }
-
 

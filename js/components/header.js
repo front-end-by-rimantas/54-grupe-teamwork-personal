@@ -26,14 +26,14 @@ export function header() {
       <button class="dropbtn">${link.text}
         <i class="fa fa-angle-down"></i>
       </button>
-      <div class="dropdown-content nav-links">
+      <div class="dropdown-content header-dropdown-shadow">
         <a href="#">Blog Home</a>
         <a href="#">Blog Single</a>
       </div>
     </div>`;
     } else {
       // .${link.href}  šiuo metu pakeista į #
-      linksHTML += `<a class='${activePage}' href="#" > ${link.text} </a>`;
+      linksHTML += `<a class='${activePage}' href=".${link.href}" > ${link.text} </a>`;
     }
   }
 
@@ -42,6 +42,9 @@ export function header() {
       <div class="header-main-div">
         <div class="logo">
           <img src="./img/logo.webp" alt="Logo" />
+        </div>
+        <div class=" meniu-icon">
+          <i class="fa fa-bars"></i>
         </div>
         <nav class="nav-links">  
           ${linksHTML}         
