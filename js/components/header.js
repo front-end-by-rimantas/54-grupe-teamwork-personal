@@ -43,6 +43,9 @@ export function header() {
         <div class="logo">
           <img src="./img/logo.webp" alt="Logo" />
         </div>
+        <div class=" meniu-icon">
+          <i class="fa fa-bars"></i>
+        </div>
         <nav class="nav-links">  
           ${linksHTML}         
         </nav>
