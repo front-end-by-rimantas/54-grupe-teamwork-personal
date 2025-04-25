@@ -1,5 +1,10 @@
 .hero-section {
   background-color: #f9f9ff;
+  padding-bottom: 0;
+}
+
+.row {
+  margin-bottom: 0;
 }
 
 .content {
@@ -20,7 +25,7 @@
   margin-bottom: 20px;
 }
 .personal-details {
-  font-size: 33px;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -41,26 +46,16 @@
   margin-top: 2rem;
 }
 
-.about-me-section {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 80px;
-  margin-top: 70px;
+.img-div-about {
+  margin-top: 4rem;
 }
 
-.about-me-section {
-  flex-direction: row-reverse;
-}
-.about-me-section > img {
-  width: 530px;
+.img-div-about img {
   height: auto;
-  object-fit: contain;
-  display: block;
+  max-width: 100%;
 }
+
 .about-me-section .content {
-  width: 30%;
   margin-bottom: 30px;
 }
 .btn {
@@ -83,10 +78,20 @@
   .name {
     font-size: 40px;
   }
+
+  .img-div-about {
+    margin-top: 7rem;
+  }
 }
 
 @media (min-width: 992px) {
   .name {
     font-size: 55px;
+  }
+  .personal-details {
+    font-size: 2rem;
+  }
+  .img-div-about {
+    margin-top: 4rem;
   }
 }
