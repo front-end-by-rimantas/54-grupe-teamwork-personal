@@ -32,7 +32,7 @@ export function faqSection() {
   let html = `<section class="container faq-section">
     ${sectionTitleHtml(
       "Frequently Asked Questions",
-      "When someone does something that they know that they shouldn’t do, did they really have a choice. Maybe what I mean to say is did they really have a chance. You can take two people."
+      "When someone does something that they know that they shouldn't do, did they really have a choice. Maybe what I mean to say is did they really have a chance. You can take two people."
     )}
     <div class="row">
         `;
@@ -58,6 +58,7 @@ export function faqSection() {
   document.body.insertAdjacentHTML("beforeend", html);
 
   let lastOpenedRow = null;
+  
   function onQuestionClick(row) {
     if (lastOpenedRow && lastOpenedRow !== row) lastOpenedRow.classList.remove("faq-section-row-active");
     row.classList.toggle("faq-section-row-active");
@@ -65,7 +66,9 @@ export function faqSection() {
   }
 
   const rows = document.querySelectorAll(".faq-section-row");
+
   onQuestionClick(rows[0]);
+
   rows.forEach((row) => {
     row.querySelector("button").addEventListener("click", () => onQuestionClick(row));
   });
