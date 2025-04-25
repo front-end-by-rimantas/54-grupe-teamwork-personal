@@ -33,7 +33,7 @@ export function header() {
     </div>`;
     } else {
       // .${link.href}  šiuo metu pakeista į #
-      linksHTML += `<a class='${activePage}' href="#" > ${link.text} </a>`;
+      linksHTML += `<a class='${activePage}' href=".${link.href}" > ${link.text} </a>`;
     }
   }
 
