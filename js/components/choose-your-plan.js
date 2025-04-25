@@ -4,22 +4,30 @@ const plans = [
   {
     number: "01",
     title: "Economy",
+    lable: 'For the individuals',
     price: "199.00",
+    items: ['Secure online transfer', 'Unlimited styles for interface', 'Reliable Customer Service'],
   },
   {
     number: "02",
     title: "Business",
+    lable: 'For the individuals',
     price: "299.00",
+    items: ['Secure online transfer', 'Unlimited styles for interface', 'Reliable Customer Service'],
   },
   {
     number: "03",
     title: "Premium",
+    lable: 'For the individuals',
     price: "399.00",
+    items: ['Secure online transfer', 'Unlimited styles for interface', 'Reliable Customer Service'],
   },
   {
     number: "04",
     title: "Exclusive",
+    lable: 'For the individuals',
     price: "499.00",
+    items: ['Secure online transfer', 'Unlimited styles for interface', 'Reliable Customer Service'],
   },
 ];
 
@@ -43,18 +51,15 @@ export function choosePlan() {
 
           <div class="column-title">
             <h4>${plan.title}</h4>
-            <p>For the individuals</p>
+            <p>${plan.lable}</p>
           </div>
           <div class="column-text">
             <span class="column-line"></span>
-            <p>Secure online transfer</p>
-            <span class="column-line"></span>
-            <p>Unlimited styles for interface</p>
-            <span class="column-line"></span>
-            <p>Reliable Customer Service</p>
+            ${plan.items.map(item => `<p>${item}</p>`).join('<span class="column-line"></span>')}
             <span class="column-line"></span>
           </div>
-          <div class="price"><i class="fa fa-gbp"></i>${plan.price}</div>
+          <div class="price">&#163;${plan.price}</div>
+          <div class="buy-now"><a href="#">buy now</a></div>
         </div>`;
   }
 
