@@ -10,37 +10,41 @@
 <body>
 
     <section class="container contacts-section">
-        <div class="row contacts-main col-12">
-            <div class="info-block">
-                <div class="location">
+        <div class="row contacts-main">
+                <div class="contacts-icons col-1">
                     <span class="icon fa fa-home"></span>
+                    <span class="icon fa fa-phone"></span>
+                    <span class="icon fa fa-envelope"></span>
+                </div>
+
+            <div class="info-block col-3">
+                <div class="location">
                     <p class="main-info">Binghamton, New York</p>
                     <p class="add-info">4343 Hinkle Deegan Lake Road</p>
                 </div>
                 <div class="location">
-                    <span class="icon fa fa-phone"></span>
                     <p class="main-info">00 (958) 9865 562</p>
-                    <p>Mon to Fri 9am to 6 pm</p>
+                    <p class="add-info">Mon to Fri 9am to 6 pm</p>
                 </div>
                 <div class="location">
-                    <span class="icon fa fa-envelope"></span>
                     <p class="main-info">support@colorlib.com</p>
-                    <p>Send us your query anytime!</p>
+                    <p class="add-info">Send us your query anytime!</p>
                 </div>
             </div>    
-            <div class="input-fields">
-                <input class="name" type="text">
-                <input class="email" type="text">
-                <input class="subject" type="text">
+            <div class="input-fields col-4">
+                <input class="contacts-name" type="text" placeholder="Enter your name">
+                <input class="contacts-email" type="email" placeholder="Enter email address">
+                <input class="contacts-subject" type="text" placeholder="Enter subject">
             </div>
             <div class="input-message">
-                <input type="text">
+                <textarea name="input-message" id="input-message" class="input-message col-4" placeholder="Enter message"></textarea>
+            </div>
+            <div class="contacts-btn-div col-12">
+            <button class="contacts-btn">send message</button>
             </div>
         </div>
-        <button class="contacts-btn"></button>
     </section>
 
-
-    <!-- <script src="../js/pages/contacts.js" type="module"></script> -->
+<script src="../js/pages/contacts.js" type="module"></script>
 </body>
 </html>
