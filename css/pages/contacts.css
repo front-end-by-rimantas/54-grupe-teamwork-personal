@@ -66,6 +66,7 @@
 .contacts-btn {
     text-transform: uppercase;
     border: none;
+    border: 1px solid var(--purple);
     background-color: var(--purple);
     color: var(--white);
     padding: 0.7rem 2rem;
