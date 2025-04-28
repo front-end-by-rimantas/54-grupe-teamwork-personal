@@ -8,10 +8,11 @@ export function loadMap () {
                 height="450" 
                 style="border:0;" 
                 allowfullscreen="" 
-                loading="lazy" 
+                loading="eager" 
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
     </section>`;
+
     document.body.insertAdjacentHTML('beforeend', HTML);
 }
