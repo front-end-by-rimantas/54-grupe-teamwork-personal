@@ -37,7 +37,7 @@ export function aboutTools() {
               <div class="value">${item.progress}%</div>
             </div>
             <div class="progress-bar-down">
-              <div class="bar" style="width: ${item.progress}%"></div>
+              <div class="bar" data-progress="${item.progress}" style="width: ${item.progress}%"></div>
             </div>
           </div>`;
   }
@@ -52,7 +52,7 @@ export function aboutTools() {
               <div class="value">${item.progress}%</div>
             </div>
             <div class="progress-bar-down">
-              <div class="bar" style="width: ${item.progress}%"></div>
+              <div class="bar" data-progress="${item.progress}" style="width: ${item.progress}%"></div>
             </div>
           </div>`;
   }
@@ -63,7 +63,7 @@ export function aboutTools() {
 
   document.body.insertAdjacentHTML("beforeend", html);
 
-  const unactivatedElements = new Set(document.querySelectorAll(".value"));
+  const unactivatedElements = new Set(document.querySelectorAll(".bar"));
 
   function onScroll() {
     unactivatedElements.forEach((item) => {
@@ -87,7 +87,7 @@ export function aboutTools() {
 
     const timer = setInterval(() => {
       progress += increment;
-      item.width = progress > finalCount ? finalCount : progress;
+      item.style.width = (progress > finalCount ? finalCount : progress) + "%";
 
       if (progress >= finalCount) {
         clearInterval(timer);
