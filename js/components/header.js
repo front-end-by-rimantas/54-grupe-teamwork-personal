@@ -55,7 +55,7 @@ export function header() {
     <header>
       <div class="header-main-div">
         <div class="logo">
-          <a href="./"> <img src="./img/logo.webp" alt="Logo" /> </a>
+          <img src="./img/logo.webp" alt="Logo" />
         </div>
         <div class=" meniu-icon">
           <i class="fa fa-bars"></i>
