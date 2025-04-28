@@ -1,5 +1,5 @@
 @import "../components/blue-title-column.css";
-
+@import "../components/map.css";
 .contacts-section {
     background-color: var(--background-darker);
 }
