@@ -27,12 +27,7 @@ export function header() {
 
   for (const link of menu) {
     let activePage = "";
-    let projectName = "";
     if (projectName + link.href === location.pathname) {
-      console.log(projectName + link.href);
-      console.log(location.pathname);
-      console.log(location.currentPage);
-      // /54-grupe-teamwork-personal/pricing/
       activePage = "active";
     }
     if (link.drop === true) {
