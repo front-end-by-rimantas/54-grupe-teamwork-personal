@@ -1,7 +1,5 @@
-
-
 export function contactsForms() {
-    const html = `<section class="container contacts-section">
+  const html = `<section class="container contacts-section">
 <div class="row contacts-main">
         <div class="contacts-icons col-1">
             <span class="icon fa fa-home"></span>
@@ -37,6 +35,5 @@ export function contactsForms() {
 </div>
 </section>`;
 
-document.body.insertAdjacentHTML("beforeend", html);
+  document.body.insertAdjacentHTML("beforeend", html);
 }
-
