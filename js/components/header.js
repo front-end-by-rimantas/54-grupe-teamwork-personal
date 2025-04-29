@@ -14,8 +14,8 @@ export function header() {
     { text: "services", href: "/services/" },
     { text: "portfolio", href: "/portfolio/" },
     { text: "pricing", href: "/pricing/" },
-    { text: "blog", drop: true },
-    { text: "pages", drop: true },
+    { text: "blog", drop: true, class: "active-upper" },
+    { text: "pages", drop: true, class: "active-lower" },
     { text: "contacts", href: "/contacts/" },
   ];
 
@@ -31,10 +31,10 @@ export function header() {
     if (link.drop === true) {
       linksHTML += `
     <div class="dropdown">
-      <button class="dropbtn">${link.text}
+      <button type="button" class="dropbtn ">${link.text}
         <i class="fa fa-angle-down"></i>
       </button>
-      <div class="dropdown-content header-dropdown-shadow">
+      <div class="dropdown-content header-dropdown-shadow ${link.class}">
         <a href="#">Blog Home</a>
         <a href="#">Blog Single</a>
       </div>
@@ -70,5 +70,16 @@ export function header() {
     } else {
       headerEl.classList.remove("shadow");
     }
+  });
+
+  const blogDivEl = document.querySelector(".active-upper");
+  const pagesDivEl = document.querySelector(".active-lower");
+  const btnEl = document.querySelectorAll(".dropbtn");
+
+  btnEl[0].addEventListener("click", () => {
+    blogDivEl.classList.toggle("active-upper");
+  });
+  btnEl[1].addEventListener("click", () => {
+    pagesDivEl.classList.toggle("active-lower");
   });
 }

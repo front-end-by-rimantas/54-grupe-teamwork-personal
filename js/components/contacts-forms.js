@@ -7,7 +7,7 @@ export function contactsForms() {
             <span class="icon fa fa-envelope"></span>
         </div>
 
-    <div class="info-block col-lg-3 col-md-4 col-sm-5 col-6">
+    <div class="info-block col-lg-3 col-md-4 col-sm-5 col-10">
         <div class="location">
             <p class="main-info">Binghamton, New York</p>
             <p class="add-info">4343 Hinkle Deegan Lake Road</p>

@@ -96,10 +96,6 @@ header + * {
   text-transform: capitalize;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 .meniu-icon {
   display: block;
   position: fixed;
@@ -120,6 +116,9 @@ header + * {
   .nav-links {
     display: flex;
   }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 }
 
 @media (max-width: 992px) {
@@ -132,11 +131,54 @@ header + * {
     position: fixed;
     top: 0;
     left: 0;
-    width: 12rem;
+    width: 16rem;
     background-color: #222;
+    opacity: 0.98;
   }
+
   .nav-links a,
   .dropbtn {
     color: var(--white);
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .shadow {
+    box-shadow: none;
+  }
+  .header-dropdown-shadow {
+    box-shadow: none;
+  }
+
+  .dropdown-content a {
+    color: var(--white);
+    background-color: #222;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+    text-transform: capitalize;
+    padding: 0.7rem 2rem;
+    padding-top: 1rem;
+  }
+
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    transform: none;
+  }
+
+  .active-upper {
+    display: none;
+  }
+  .active-lower {
+    display: none;
   }
 }
