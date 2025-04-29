@@ -1,5 +1,3 @@
-/* Bootstrap 12 columns layout */
-
 .container,
 .container-fluid {
   width: 100%;
@@ -111,6 +109,24 @@
 .m-11 {
   margin-left: var(--m11);
 }
+.hidden {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-inline {
+  display: inline;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
 
 @media (min-width: 576px) {
   .container .row {
@@ -189,6 +205,24 @@
   }
   .m-sm-11 {
     margin-left: var(--m11);
+  }
+  .hidden-sm {
+    display: none;
+  }
+  .d-block-sm {
+    display: block;
+  }
+  .d-inline-sm {
+    display: inline;
+  }
+  .d-inline-block-sm {
+    display: inline-block;
+  }
+  .d-flex-sm {
+    display: flex;
+  }
+  .d-grid-sm {
+    display: grid;
   }
 }
 
@@ -270,6 +304,24 @@
   .m-md-11 {
     margin-left: var(--m11);
   }
+  .hidden-md {
+    display: none;
+  }
+  .d-block-md {
+    display: block;
+  }
+  .d-inline-md {
+    display: inline;
+  }
+  .d-inline-block-md {
+    display: inline-block;
+  }
+  .d-flex-md {
+    display: flex;
+  }
+  .d-grid-md {
+    display: grid;
+  }
 }
 
 @media (min-width: 992px) {
@@ -349,6 +401,24 @@
   }
   .m-lg-11 {
     margin-left: var(--m11);
+  }
+  .hidden-lg {
+    display: none;
+  }
+  .d-block-lg {
+    display: block;
+  }
+  .d-inline-lg {
+    display: inline;
+  }
+  .d-inline-block-lg {
+    display: inline-block;
+  }
+  .d-flex-lg {
+    display: flex;
+  }
+  .d-grid-lg {
+    display: grid;
   }
 }
 
@@ -430,6 +500,24 @@
   .m-xl-11 {
     margin-left: var(--m11);
   }
+  .hidden-xl {
+    display: none;
+  }
+  .d-block-xl {
+    display: block;
+  }
+  .d-inline-xl {
+    display: inline;
+  }
+  .d-inline-block-xl {
+    display: inline-block;
+  }
+  .d-flex-xl {
+    display: flex;
+  }
+  .d-grid-xl {
+    display: grid;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -509,5 +597,23 @@
   }
   .m-xxl-11 {
     margin-left: var(--m11);
+  }
+  .hidden-xxl {
+    display: none;
+  }
+  .d-block-xxl {
+    display: block;
+  }
+  .d-inline-xxl {
+    display: inline;
+  }
+  .d-inline-block-xxl {
+    display: inline-block;
+  }
+  .d-flex-xxl {
+    display: flex;
+  }
+  .d-grid-xxl {
+    display: grid;
   }
 }
