@@ -4,9 +4,7 @@ export function header() {
 
   if (location.hostname !== "localhost") {
     projectName = "/54-grupe-teamwork-personal";
-    // projectName = '/' + location.pathname.split('/')[1];
     base = "https://front-end-by-rimantas.github.io/54-grupe-teamwork-personal/";
-    // base = location.origin + projectName
   }
   document.head.insertAdjacentHTML("afterbegin", `<base href ="${base}">`);
 
@@ -74,5 +72,3 @@ export function header() {
     }
   });
 }
-
-// dropdown - content; hower addEventListener
