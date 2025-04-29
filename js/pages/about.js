@@ -1,5 +1,6 @@
 import { header } from "../components/header.js";
 import { blueTitleColumn } from "../components/blue-title-column.js";
+import { aboutFreeText } from "../components/about-free-text.js";
 import { aboutMe } from "../components/about-me.js";
 import { aboutTools } from "../components/about-tools.js";
 /* My Qualifications */
@@ -10,6 +11,7 @@ import { footer } from "../components/footer.js";
 header();
 blueTitleColumn("About Me", "About Me", "./about/index.html");
 aboutMe();
+aboutFreeText();
 aboutTools();
 /* My Qualifications */
 clientFeedbackSection();
