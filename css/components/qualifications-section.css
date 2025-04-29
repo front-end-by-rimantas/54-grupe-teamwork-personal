@@ -71,7 +71,7 @@
   flex-direction: column;
   row-gap: 3px;
   align-items: center;
-  transition: all 600ms;
+  transition: all 1s;
 }
 
 .qualifications-section-content img {
