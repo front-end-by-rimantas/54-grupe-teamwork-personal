@@ -77,6 +77,7 @@ export function aboutTools() {
     if (unactivatedElements.size === 0) window.removeEventListener("scroll", onScroll);
   }
 
+  onScroll();
   window.addEventListener("scroll", onScroll);
 
   function activateCounting(item) {
