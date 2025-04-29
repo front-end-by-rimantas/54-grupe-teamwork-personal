@@ -10,7 +10,7 @@ export function aboutFreeText() {
     },
   ];
 
-  let html = `<section class="container">
+  let html = `<section class="container free-text-container">
     <div class="row col-12">`;
 
   for (const row of text) {

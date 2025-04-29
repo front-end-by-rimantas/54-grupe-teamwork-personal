@@ -25,7 +25,7 @@ export function footer() {
           <h4>Newsletter</h4>
           <p>Stay updated with our latest trends</p>
           <div class="input-div col-12">
-            <input class="input-email" type="email" placeholder="Enter email address" name="email" />
+            <input class="input-email" type="email" placeholder="Enter Email Address" name="email" />
             <button type="submit" class="input-arrow">${arrow}</button>
           </div>
           <p class="submitting">Submitting...</p>
