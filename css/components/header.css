@@ -131,24 +131,28 @@ header + * {
 
 @media (max-width: 992px) {
   .nav-links {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 1.5rem 1rem;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -16rem;
     width: 16rem;
     background-color: #222;
     opacity: 0.98;
+    transition: all 0.5s;
+    box-shadow: none;
   }
 
   .nav-links-active {
     display: flex;
+    transform: translateX(16rem);
   }
 
   .menu-icon-none {
+    transform: translateX(-100%);
     display: none;
   }
 
@@ -200,5 +204,16 @@ header + * {
   }
   .active-lower {
     display: none;
+  }
+
+  .mobile-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--black);
+    opacity: 0.8;
   }
 }
