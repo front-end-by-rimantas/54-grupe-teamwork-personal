@@ -41,23 +41,37 @@
   height: 2.65rem;
   border-radius: 0;
   border: 1px solid var(--grey);
+  padding: 15px;
+  font-size: 0.8125rem;
+  font-family: inherit;
+  outline: none;
+  border: 1px solid rgb(202, 208, 214);
 }
 
 .contacts-name::placeholder,
 .contacts-email::placeholder,
-.contacts-subject::placeholder {
-  padding-left: 1rem;
+.contacts-subject::placeholder,
+.input-message::placeholder {
+  font-family: inherit;
+  color: #6c757d;
 }
 
-.input-message {
+.contacts-name:focus,
+.contacts-email:focus,
+.contacts-subject:focus,
+#input-message:focus {
+  border-color: rgb(98, 101, 104);
+}
+
+#input-message {
   height: 10rem;
   border-radius: 0;
-}
-
-.input-message::placeholder {
-  font-family: Poppins;
-  padding-top: 0.5rem;
-  padding-left: 1rem;
+  resize: vertical;
+  padding: 15px;
+  font-size: 0.8125rem;
+  outline: none;
+  font-family: inherit;
+  border: 1px solid rgb(202, 208, 214);
 }
 
 .contacts-btn-div {
