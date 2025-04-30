@@ -116,7 +116,7 @@ export function header() {
     menuIconEl.classList.add("menu-icon-none");
     menuCrossEl.classList.add("menu-icon-flex");
     mobileBgEl.style.display = "block";
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
   });
 
   menuCrossEl.addEventListener("click", () => {
@@ -124,6 +124,6 @@ export function header() {
     menuIconEl.classList.remove("menu-icon-none");
     menuCrossEl.classList.remove("menu-icon-flex");
     mobileBgEl.style.display = "";
-    document.body.style.overflow = "";
+    // document.body.style.overflow = "";
   });
 }
