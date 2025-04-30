@@ -43,7 +43,8 @@ export function header() {
       linksHTML += `<a class='${activePage}' href=".${link.href}" > ${link.text} </a>`;
     }
   }
-
+  const cross =
+    '<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="2rem" width="2rem" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>';
   let HTML = `
     <header>
       <div class="header-main-div">
@@ -52,7 +53,8 @@ export function header() {
           <a href="./"> <img src="./img/logo.webp" alt="Logo" /> </a>
 
         </div>
-        <div class=" meniu-icon">
+        <div class='menu-cross'>${cross}</div>
+        <div class="meniu-icon">
           <i class="fa fa-bars"></i>
         </div>
         <nav class="nav-links">  
@@ -81,5 +83,21 @@ export function header() {
   });
   btnEl[1].addEventListener("click", () => {
     pagesDivEl.classList.toggle("active-lower");
+  });
+
+  const menuIconEl = document.querySelector(".meniu-icon");
+  const menuCrossEl = document.querySelector(".menu-cross");
+  const navLinksEl = document.querySelector(".nav-links");
+
+  menuIconEl.addEventListener("click", () => {
+    navLinksEl.classList.add("nav-links-active");
+    menuIconEl.classList.add("menu-icon-none");
+    menuCrossEl.classList.add("menu-icon-flex");
+  });
+
+  menuCrossEl.addEventListener("click", () => {
+    navLinksEl.classList.remove("nav-links-active");
+    menuIconEl.classList.remove("menu-icon-none");
+    menuCrossEl.classList.remove("menu-icon-flex");
   });
 }
