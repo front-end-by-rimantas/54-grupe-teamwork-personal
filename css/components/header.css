@@ -54,6 +54,7 @@ header + * {
 
 .nav-links a:hover,
 .dropbtn:hover,
+.dropdown2 .dropbtn2:hover,
 .nav-links a.active {
   color: var(--purple);
 }
@@ -89,13 +90,41 @@ header + * {
   background-color: white;
 }
 
-.dropdown-content a {
+.dropdown-content a,
+.dropdown-content button {
   color: black;
   padding: 0.5rem 1rem;
   text-decoration: none;
   display: block;
   text-align: left;
   text-transform: capitalize;
+}
+
+.dropdown-content2 a {
+  color: black;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.dropdown-content2 {
+  color: black;
+  display: none;
+  transform: translate(-100%, -50%);
+  position: absolute;
+  width: 150px;
+  background-color: white;
+}
+
+.dropbtn2 {
+  font-size: 0.8rem;
+  border: none;
+  background-color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 
 .dropdown-content li {
@@ -130,7 +159,8 @@ header + * {
   .nav-links {
     display: flex;
   }
-  .dropdown:hover .dropdown-content {
+  .dropdown:hover .dropdown-content,
+  .dropdown2:hover .dropdown-content2 {
     display: block;
   }
 }
@@ -148,7 +178,7 @@ header + * {
     width: 16rem;
     background-color: #222;
     opacity: 0.98;
-    transition: all 0.5s;
+    transition: transform 0.5s;
     box-shadow: none;
   }
 
@@ -180,9 +210,6 @@ header + * {
     height: auto;
   }
 
-  .shadow {
-    box-shadow: none;
-  }
   .header-dropdown-shadow {
     box-shadow: none;
   }
@@ -208,9 +235,33 @@ header + * {
     overflow: visible;
   }
 
+  .dropdown-content2 {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    transform: none;
+    transition: all 0.5s;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .dropdown2 {
+    background-color: inherit;
+    padding: 0.25rem 1rem;
+    width: 100%;
+    color: white;
+  }
+
   .dropdown-mobile-closed {
-    max-height: 0;
-    overflow: hidden;
+    display: none;
+  }
+
+  .dropdown2 .dropbtn2 {
+    color: white;
+  }
+
+  .dropdown-content {
+    background-color: inherit;
   }
 
   .mobile-bg {
