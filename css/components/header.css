@@ -64,12 +64,18 @@ header + * {
   background-color: inherit;
   font-family: inherit;
   text-transform: uppercase;
+  cursor: pointer;
 }
+
 .dropdown {
   display: flex;
   align-items: center;
   height: 4rem;
   position: relative;
+}
+
+.shadow {
+  box-shadow: 0rem 0.05rem 2rem lightgray;
 }
 
 .dropdown-content {
@@ -83,10 +89,6 @@ header + * {
   background-color: white;
 }
 
-.shadow {
-  box-shadow: 0rem 0.05rem 2rem lightgray;
-}
-
 .dropdown-content a {
   color: black;
   padding: 0.5rem 1rem;
@@ -94,6 +96,10 @@ header + * {
   display: block;
   text-align: left;
   text-transform: capitalize;
+}
+
+.dropdown-content li {
+  list-style: none;
 }
 
 .meniu-icon {
@@ -197,13 +203,14 @@ header + * {
     flex-direction: column;
     position: static;
     transform: none;
+    transition: all 0.5s;
+    max-height: none;
+    overflow: visible;
   }
 
-  .active-upper {
-    display: none;
-  }
-  .active-lower {
-    display: none;
+  .dropdown-mobile-closed {
+    max-height: 0;
+    overflow: hidden;
   }
 
   .mobile-bg {
