@@ -71,7 +71,8 @@ export function header() {
             return `
               <div class="dropdown2 drop-event">
                 <button type="button" class="dropbtn2">${text}
-                  <i class="fa fa-angle-down"></i>
+                  <i class="fa fa-angle-down header-arrow-icon-down"></i>
+                  <i class="fa fa-angle-left header-arrow-icon-left"></i>
                   </button>
                   <ul class="dropdown-content2 header-dropdown-shadow dropdown-mobile-closed">
                     ${children.map(({ href, text }) => `<li><a href="${href}">${text}</a></li>`).join("")}
