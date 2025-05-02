@@ -100,8 +100,7 @@ export function header() {
     headerEl.classList.toggle("shadow", window.scrollY > headerEl.offsetHeight + 5);
   });
 
-  document.querySelectorAll(".drop-event").forEach((el) => {
-    const btnEl = el.querySelector("button");
+  document.querySelectorAll(".drop-event button").forEach((btnEl) => {
     btnEl.addEventListener("click", () => {
       btnEl.nextElementSibling.classList.toggle("dropdown-mobile-closed");
     });
@@ -117,7 +116,6 @@ export function header() {
     menuIconEl.classList.add("menu-icon-none");
     menuCrossEl.classList.add("menu-icon-flex");
     mobileBgEl.style.display = "block";
-    // document.body.style.overflow = "hidden";
   });
 
   menuCrossEl.addEventListener("click", () => {
@@ -125,6 +123,5 @@ export function header() {
     menuIconEl.classList.remove("menu-icon-none");
     menuCrossEl.classList.remove("menu-icon-flex");
     mobileBgEl.style.display = "";
-    // document.body.style.overflow = "";
   });
 }
