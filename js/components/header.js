@@ -14,53 +14,82 @@ export function header() {
     { text: "services", href: "/services/" },
     { text: "portfolio", href: "/portfolio/" },
     { text: "pricing", href: "/pricing/" },
-    { text: "blog", drop: true, class: "active-upper" },
-    { text: "pages", drop: true, class: "active-lower" },
+    {
+      text: "blog",
+      children: [
+        { text: "Blog Home", href: "#" },
+        { text: "Blog Single", href: "#" },
+      ],
+    },
+    {
+      text: "pages",
+      children: [
+        { text: "Blog Home 2", href: "#" },
+        { text: "Blog Single 2", href: "#" },
+        {
+          text: "Drop Single 2",
+          children: [
+            { text: "Blog Home 3", href: "#" },
+            { text: "Blog Single 3", href: "#" },
+          ],
+        },
+      ],
+    },
     { text: "contacts", href: "/contacts/" },
   ];
 
   const lp = location.pathname;
   const currentPage = lp.length > 1 && lp.at(-1) === "/" ? lp.slice(0, -1) : lp;
-  let linksHTML = "";
 
-  for (const link of menu) {
-    let activePage = "";
-    if (projectName + link.href === location.pathname) {
-      activePage = "active";
-    }
-    if (link.drop === true) {
-      linksHTML += `
-    <div class="dropdown">
-      <button type="button" class="dropbtn ">${link.text}
-        <i class="fa fa-angle-down"></i>
-      </button>
-      <div class="dropdown-content header-dropdown-shadow ${link.class}">
-        <a href="#">Blog Home</a>
-        <a href="#">Blog Single</a>
-      </div>
-    </div>`;
-    } else {
-      linksHTML += `<a class='${activePage}' href=".${link.href}" > ${link.text} </a>`;
-    }
-  }
-  const cross =
+  const crossIcon =
     '<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="2rem" width="2rem" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>';
+
   let HTML = `
     <header>
       <div class='mobile-bg'></div>
         <div class="header-main-div">
           <div class="logo">
-
             <a href="./"> <img src="./img/logo.webp" alt="Logo" /> </a>
-
           </div>
-          <div class='menu-cross'>${cross}</div>
+          <div class='menu-cross'>${crossIcon}</div>
           <div class="meniu-icon">
             <i class="fa fa-bars"></i>
           </div>
-          <nav class="nav-links">  
-            ${linksHTML}         
-          </nav>
+          <nav class="nav-links">`;
+
+  for (const linkItem of menu) {
+    if (linkItem.hasOwnProperty("children")) {
+      HTML += `
+    <div class="dropdown drop-event">
+      <button type="button" class="dropbtn">${linkItem.text}
+        <i class="fa fa-angle-down"></i>
+      </button>
+      <ul class="dropdown-content header-dropdown-shadow dropdown-mobile-closed">
+        ${linkItem.children
+          .map(({ href, text, children }) => {
+            if (!children) return `<li><a href="${href}">${text}</a></li>`;
+            return `
+              <div class="dropdown2 drop-event">
+                <button type="button" class="dropbtn2">${text}
+                  <i class="fa fa-angle-down header-arrow-icon-down"></i>
+                  <i class="fa fa-angle-left header-arrow-icon-left"></i>
+                  </button>
+                  <ul class="dropdown-content2 header-dropdown-shadow dropdown-mobile-closed">
+                    ${children.map(({ href, text }) => `<li><a href="${href}">${text}</a></li>`).join("")}
+                  </ul>
+              </div>`;
+          })
+          .join("")}
+      </ul>
+    </div>`;
+    } else {
+      HTML += `<a class='${projectName + linkItem.href === location.pathname ? "active" : ""}' href=".${
+        linkItem.href
+      }" > ${linkItem.text} </a>`;
+    }
+  }
+
+  HTML += `</nav>
         </div>
     </header>`;
   document.body.insertAdjacentHTML("beforeend", HTML);
@@ -68,22 +97,14 @@ export function header() {
   const headerEl = document.querySelector("header");
 
   document.addEventListener("scroll", () => {
-    if (window.scrollY > 150) {
-      headerEl.classList.add("shadow");
-    } else {
-      headerEl.classList.remove("shadow");
-    }
+    headerEl.classList.toggle("shadow", window.scrollY > headerEl.offsetHeight + 5);
   });
 
-  const blogDivEl = document.querySelector(".active-upper");
-  const pagesDivEl = document.querySelector(".active-lower");
-  const btnEl = document.querySelectorAll(".dropbtn");
-
-  btnEl[0].addEventListener("click", () => {
-    blogDivEl.classList.toggle("active-upper");
-  });
-  btnEl[1].addEventListener("click", () => {
-    pagesDivEl.classList.toggle("active-lower");
+  document.querySelectorAll(".drop-event").forEach((el) => {
+    const btnEl = el.querySelector("button");
+    btnEl.addEventListener("click", () => {
+      btnEl.nextElementSibling.classList.toggle("dropdown-mobile-closed");
+    });
   });
 
   const menuIconEl = document.querySelector(".meniu-icon");
@@ -96,6 +117,7 @@ export function header() {
     menuIconEl.classList.add("menu-icon-none");
     menuCrossEl.classList.add("menu-icon-flex");
     mobileBgEl.style.display = "block";
+    // document.body.style.overflow = "hidden";
   });
 
   menuCrossEl.addEventListener("click", () => {
@@ -103,5 +125,6 @@ export function header() {
     menuIconEl.classList.remove("menu-icon-none");
     menuCrossEl.classList.remove("menu-icon-flex");
     mobileBgEl.style.display = "";
+    // document.body.style.overflow = "";
   });
 }
