@@ -1,7 +1,5 @@
-
-
 export function contactsForms() {
-    const html = `<section class="container contacts-section">
+  const html = `<section class="container contacts-section">
 <div class="row contacts-main">
         <div class="contacts-icons col-1">
             <span class="icon fa fa-home"></span>
@@ -9,7 +7,7 @@ export function contactsForms() {
             <span class="icon fa fa-envelope"></span>
         </div>
 
-    <div class="info-block col-lg-3 col-md-4 col-sm-5 col-6">
+    <div class="info-block col-lg-3 col-md-4 col-sm-5 col-10">
         <div class="location">
             <p class="main-info">Binghamton, New York</p>
             <p class="add-info">4343 Hinkle Deegan Lake Road</p>
@@ -37,6 +35,5 @@ export function contactsForms() {
 </div>
 </section>`;
 
-document.body.insertAdjacentHTML("beforeend", html);
+  document.body.insertAdjacentHTML("beforeend", html);
 }
-

@@ -59,16 +59,19 @@
   margin-bottom: 30px;
 }
 .btn {
-  background: linear-gradient(#8490ff 0%, #62bdfc 100%);
-  padding: 13px 35px;
+  background: linear-gradient(to right, #8490ff 0%, #62bdfc 100%);
+  transition: all 0.3s ease 0s;
+  padding: 10px 30px;
   border: none;
   color: #fff;
   font-size: 14px;
   text-decoration: none;
   display: inline-block;
+  font-weight: 500;
 }
+
 .btn:hover {
-  box-shadow: 0 20px 20px #ccd0f7;
+  box-shadow: 0px 20px 20px 0px rgba(132, 144, 255, 0.3);
 }
 
 @media (min-width: 768px) {

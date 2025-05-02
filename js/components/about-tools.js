@@ -2,26 +2,26 @@ export function aboutTools() {
   const dataLeft = [
     {
       tool: "After Effects",
-      progress: "85%",
+      progress: 85,
     },
     {
       tool: "Photoshop",
-      progress: "90%",
+      progress: 90,
     },
     {
       tool: "Ilustrator",
-      progress: "70%",
+      progress: 70,
     },
   ];
 
   const dataRight = [
     {
       tool: "Sublime",
-      progress: "95%",
+      progress: 95,
     },
     {
       tool: "Sketch",
-      progress: "85%",
+      progress: 85,
     },
   ];
 
@@ -34,10 +34,10 @@ export function aboutTools() {
     html += ` <div class="progress-bar">
             <div class="progress-bar-up">
               <div class="label">${item.tool}&nbsp</div>
-              <div class="value">${item.progress}</div>
+              <div class="value">${item.progress}%</div>
             </div>
             <div class="progress-bar-down">
-              <div class="bar" style="width: ${item.progress}"></div>
+              <div class="bar" data-progress="${item.progress}" style="width: ${item.progress}%"></div>
             </div>
           </div>`;
   }
@@ -49,10 +49,10 @@ export function aboutTools() {
     html += ` <div class="progress-bar">
             <div class="progress-bar-up">
               <div class="label">${item.tool}&nbsp</div>
-              <div class="value">${item.progress}</div>
+              <div class="value">${item.progress}%</div>
             </div>
             <div class="progress-bar-down">
-              <div class="bar" style="width: ${item.progress}"></div>
+              <div class="bar" data-progress="${item.progress}" style="width: ${item.progress}%"></div>
             </div>
           </div>`;
   }
@@ -62,4 +62,37 @@ export function aboutTools() {
     </section>`;
 
   document.body.insertAdjacentHTML("beforeend", html);
+
+  const unactivatedElements = new Set(document.querySelectorAll(".bar"));
+
+  function onScroll() {
+    unactivatedElements.forEach((item) => {
+      const rectBox = item.getBoundingClientRect();
+      if (rectBox.bottom < window.innerHeight) {
+        activateCounting(item);
+        unactivatedElements.delete(item);
+      }
+    });
+
+    if (unactivatedElements.size === 0) window.removeEventListener("scroll", onScroll);
+  }
+
+  onScroll();
+  window.addEventListener("scroll", onScroll);
+
+  function activateCounting(item) {
+    const finalCount = Number(item.dataset.progress);
+    let progress = 0;
+    const countTime = 30;
+    const increment = Math.ceil(finalCount / countTime);
+
+    const timer = setInterval(() => {
+      progress += increment;
+      item.style.width = (progress > finalCount ? finalCount : progress) + "%";
+
+      if (progress >= finalCount) {
+        clearInterval(timer);
+      }
+    }, countTime);
+  }
 }

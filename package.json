@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "dead-server --host=localhost --port=5477",
+    "devhost": "dead-server --host=0.0.0.0 --port=5477",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
